@@ -7,6 +7,8 @@ import { Separator } from './ui/separator';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
+import Projects from './Projects';
+import Experience from './Experience';
 import { 
   Github, 
   Linkedin, 
