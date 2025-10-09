@@ -276,6 +276,155 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <Projects />
+
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Contact Section */}
+      <section className="py-24 px-8" id="contact" style={{ backgroundColor: '#302f2c' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="mb-4"
+                style={{
+                  fontFamily: 'Inter, Arial, sans-serif',
+                  fontWeight: 900,
+                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                  lineHeight: '0.9',
+                  color: '#d9fb06',
+                  textTransform: 'uppercase'
+                }}>
+              Get In Touch
+            </h2>
+            <p style={{
+                 fontFamily: 'Inter, Arial, sans-serif',
+                 fontSize: '1.2rem',
+                 color: '#888680'
+               }}>
+              Ready to discuss your next project? Let's connect!
+            </p>
+          </div>
+
+          <Card className="border-0" style={{ backgroundColor: '#1a1c1b' }}>
+            <CardContent className="p-8">
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
+                      Name *
+                    </label>
+                    <Input
+                      required
+                      value={contactForm.name}
+                      onChange={handleInputChange('name')}
+                      placeholder="Your full name"
+                      style={{
+                        backgroundColor: '#302f2c',
+                        border: '1px solid #888680',
+                        color: '#dfddd6'
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
+                      Email *
+                    </label>
+                    <Input
+                      type="email"
+                      required
+                      value={contactForm.email}
+                      onChange={handleInputChange('email')}
+                      placeholder="your.email@example.com"
+                      style={{
+                        backgroundColor: '#302f2c',
+                        border: '1px solid #888680',
+                        color: '#dfddd6'
+                      }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
+                    Subject *
+                  </label>
+                  <Input
+                    required
+                    value={contactForm.subject}
+                    onChange={handleInputChange('subject')}
+                    placeholder="Project discussion, collaboration opportunity, etc."
+                    style={{
+                      backgroundColor: '#302f2c',
+                      border: '1px solid #888680',
+                      color: '#dfddd6'
+                    }}
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
+                    Message *
+                  </label>
+                  <Textarea
+                    required
+                    rows={5}
+                    value={contactForm.message}
+                    onChange={handleInputChange('message')}
+                    placeholder="Tell me about your project, timeline, and how I can help..."
+                    style={{
+                      backgroundColor: '#302f2c',
+                      border: '1px solid #888680',
+                      color: '#dfddd6',
+                      minHeight: '120px'
+                    }}
+                  />
+                </div>
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full"
+                  style={{
+                    background: '#d9fb06',
+                    color: '#1a1c1b',
+                    border: 'none',
+                    borderRadius: '10rem',
+                    padding: '1rem 2rem',
+                    fontFamily: 'Inter, Arial, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '1rem',
+                    textTransform: 'uppercase',
+                    minHeight: '48px'
+                  }}
+                >
+                  {isSubmitting ? 'Sending...' : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+
+          <div className="mt-12 text-center">
+            <div className="flex justify-center space-x-8 mb-6">
+              <a href={`mailto:${portfolioData.personal.email}`}
+                 className="flex items-center gap-2 transition-opacity hover:opacity-70"
+                 style={{ color: '#d9fb06' }}>
+                <Mail className="h-5 w-5" />
+                <span>{portfolioData.personal.email}</span>
+              </a>
+              <a href={portfolioData.personal.linkedin}
+                 className="flex items-center gap-2 transition-opacity hover:opacity-70"
+                 style={{ color: '#d9fb06' }}>
+                <Linkedin className="h-5 w-5" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-16 px-8" style={{ backgroundColor: '#302f2c' }}>
         <div className="max-w-7xl mx-auto text-center">
