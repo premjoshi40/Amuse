@@ -13,7 +13,7 @@ import {
   Sparkles,
   ArrowRight,
   Scan,
-  Gallery,
+  LayoutGrid,
   Route
 } from 'lucide-react';
 
