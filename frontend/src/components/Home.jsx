@@ -1,273 +1,206 @@
-import React, { useState } from 'react';
-import { portfolioData, mockHandlers } from '../mock';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { museumData, museumHandlers } from '../mock';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Separator } from './ui/separator';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { useToast } from '../hooks/use-toast';
-import Projects from './Projects';
-import Experience from './Experience';
 import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Phone, 
+  Camera, 
+  QrCode, 
+  Heart, 
   MapPin, 
-  ExternalLink,
-  Download,
+  Users, 
+  Sparkles,
   ArrowRight,
-  Code2,
-  Briefcase,
-  User,
-  Send
+  Scan,
+  Gallery,
+  Route
 } from 'lucide-react';
 
 const Home = () => {
-  const { toast } = useToast();
-  const [contactForm, setContactForm] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+  const [favorites, setFavorites] = useState([]);
 
-  const handleContactSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const result = await mockHandlers.submitContactForm(contactForm);
-      if (result.success) {
-        toast({
-          title: "Message Sent!",
-          description: result.message,
-        });
-        setContactForm({ name: '', email: '', subject: '', message: '' });
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+  useEffect(() => {
+    setFavorites(museumHandlers.getFavorites());
+  }, []);
+
+  const handleSectionClick = (sectionId) => {
+    navigate(`/gallery/${sectionId}`);
   };
 
-  const handleInputChange = (field) => (e) => {
-    setContactForm(prev => ({
-      ...prev,
-      [field]: e.target.value
-    }));
+  const handleQuickScan = () => {
+    navigate('/scanner');
   };
 
-  const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const handleARMode = () => {
+    navigate('/ar');
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#1a1c1b' }}>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6" 
-           style={{ backgroundColor: 'rgba(26, 28, 27, 0.95)', backdropFilter: 'blur(10px)' }}>
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold" style={{ color: '#d9fb06' }}>
-            {portfolioData.personal.name}
+    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+      {/* Header */}
+      <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f', backgroundColor: '#0f0f0f' }}>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center"
+                 style={{ backgroundColor: '#d4af37' }}>
+              <Gallery className="h-6 w-6 text-black" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>
+                Amuse
+              </h1>
+              <p className="text-sm" style={{ color: '#888888' }}>
+                Interactive Museum Experience
+              </p>
+            </div>
           </div>
-          <div className="hidden md:flex space-x-8">
-            {['About', 'Projects', 'Experience', 'Contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="nav-link transition-colors duration-300 hover:text-opacity-80"
-                style={{ color: '#d9fb06' }}
-              >
-                {item}
-              </button>
-            ))}
+          
+          <div className="flex items-center space-x-3">
+            <Button
+              onClick={() => navigate('/favorites')}
+              variant="outline"
+              size="sm"
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid #d4af37',
+                color: '#d4af37'
+              }}
+            >
+              <Heart className="h-4 w-4 mr-2" />
+              {favorites.length}
+            </Button>
+            <Button
+              onClick={() => navigate('/tours')}
+              variant="outline" 
+              size="sm"
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid #d4af37',
+                color: '#d4af37'
+              }}
+            >
+              <Route className="h-4 w-4 mr-2" />
+              Tours
+            </Button>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-8 pt-20" id="hero">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="max-w-4xl">
-            <h1 className="mb-6" 
+      <section className="px-6 py-16">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4"
                 style={{ 
-                  fontFamily: 'Inter, Arial, sans-serif',
-                  fontWeight: 900,
-                  fontSize: 'clamp(3rem, 8vw, 6rem)',
-                  lineHeight: '0.9',
-                  color: '#d9fb06',
-                  textTransform: 'uppercase'
+                  color: '#ffffff',
+                  background: 'linear-gradient(135deg, #d4af37, #f7d794)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
                 }}>
-              {portfolioData.personal.name}
-            </h1>
-            <h2 className="mb-8" 
-                style={{
-                  fontFamily: 'Inter, Arial, sans-serif',
-                  fontWeight: 600,
-                  fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-                  lineHeight: '1.2',
-                  color: '#888680'
-                }}>
-              {portfolioData.personal.title}
+              Discover Art Like Never Before
             </h2>
-            <p className="mb-12 max-w-2xl" 
-               style={{
-                 fontFamily: 'Inter, Arial, sans-serif',
-                 fontSize: '1.25rem',
-                 lineHeight: '1.6',
-                 color: '#dfddd6'
-               }}>
-              {portfolioData.personal.tagline}
+            <p className="text-xl max-w-3xl mx-auto mb-8"
+               style={{ color: '#cccccc' }}>
+              Experience an immersive journey through history's greatest artworks with AR, interactive displays, and instant information discovery.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                onClick={() => scrollToSection('projects')}
-                className="btn-primary"
-                style={{
-                  background: '#d9fb06',
-                  color: '#1a1c1b',
-                  border: 'none',
-                  borderRadius: '10rem',
-                  padding: '1rem 2rem',
-                  fontFamily: 'Inter, Arial, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  textTransform: 'uppercase',
-                  minHeight: '48px'
-                }}
-              >
-                View My Work
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                onClick={mockHandlers.downloadResume}
-                variant="outline"
-                style={{
-                  background: 'transparent',
-                  color: '#d9fb06',
-                  border: '1px solid #d9fb06',
-                  borderRadius: '10rem',
-                  padding: '1rem 2rem',
-                  fontFamily: 'Inter, Arial, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  textTransform: 'uppercase',
-                  minHeight: '48px'
-                }}
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
-            </div>
           </div>
-        </div>
-      </section>
 
-      {/* About Section */}
-      <section className="py-24 px-8" id="about" style={{ backgroundColor: '#302f2c' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="mb-8"
-                  style={{
-                    fontFamily: 'Inter, Arial, sans-serif',
-                    fontWeight: 900,
-                    fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                    lineHeight: '0.9',
-                    color: '#d9fb06',
-                    textTransform: 'uppercase'
-                  }}>
-                About Me
-              </h2>
-              <p className="mb-8"
-                 style={{
-                   fontFamily: 'Inter, Arial, sans-serif',
-                   fontSize: '1.1rem',
-                   lineHeight: '1.7',
-                   color: '#dfddd6'
-                 }}>
-                {portfolioData.about.summary}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2" style={{ color: '#888680' }}>
-                  <MapPin className="h-4 w-4" />
-                  {portfolioData.personal.location}
-                </div>
-                <div className="flex items-center gap-2" style={{ color: '#888680' }}>
-                  <Mail className="h-4 w-4" />
-                  {portfolioData.personal.email}
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="mb-6"
-                  style={{
-                    fontFamily: 'Inter, Arial, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '1.5rem',
-                    color: '#d9fb06'
-                  }}>
-                Key Achievements
-              </h3>
-              <ul className="space-y-4">
-                {portfolioData.about.highlights.map((highlight, index) => (
-                  <li key={index} 
-                      className="flex items-start gap-3"
-                      style={{ color: '#dfddd6' }}>
-                    <div className="w-2 h-2 rounded-full mt-2"
-                         style={{ backgroundColor: '#d9fb06' }}></div>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-24 px-8" style={{ backgroundColor: '#1a1c1b' }}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="mb-16 text-center"
+          {/* Quick Action Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <Button 
+              onClick={handleQuickScan}
+              size="lg"
               style={{
-                fontFamily: 'Inter, Arial, sans-serif',
-                fontWeight: 900,
-                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                lineHeight: '0.9',
-                color: '#d9fb06',
-                textTransform: 'uppercase'
-              }}>
-            Technical Skills
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {portfolioData.skills.map((skillGroup, index) => (
-              <Card key={index} className="border-0" style={{ backgroundColor: '#302f2c' }}>
-                <CardHeader>
-                  <CardTitle style={{ color: '#d9fb06', fontSize: '1.2rem' }}>
-                    {skillGroup.category}
+                backgroundColor: '#d4af37',
+                color: '#000000',
+                padding: '1rem 2rem',
+                fontSize: '1.1rem',
+                borderRadius: '12px'
+              }}
+            >
+              <QrCode className="mr-2 h-5 w-5" />
+              Quick Scan
+            </Button>
+            <Button
+              onClick={handleARMode}
+              variant="outline"
+              size="lg"
+              style={{
+                backgroundColor: 'transparent',
+                border: '2px solid #d4af37',
+                color: '#d4af37',
+                padding: '1rem 2rem',
+                fontSize: '1.1rem',
+                borderRadius: '12px'
+              }}
+            >
+              <Camera className="mr-2 h-5 w-5" />
+              AR Experience
+            </Button>
+            <Button
+              onClick={() => navigate('/tours')}
+              variant="outline"
+              size="lg"
+              style={{
+                backgroundColor: 'transparent', 
+                border: '2px solid #d4af37',
+                color: '#d4af37',
+                padding: '1rem 2rem',
+                fontSize: '1.1rem',
+                borderRadius: '12px'
+              }}
+            >
+              <Route className="mr-2 h-5 w-5" />
+              Guided Tours
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Museum Sections */}
+      <section className="px-6 py-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4" style={{ color: '#ffffff' }}>
+              Explore Collections
+            </h3>
+            <p className="text-lg" style={{ color: '#888888' }}>
+              Dive into our curated galleries featuring masterpieces from around the world
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {museumData.sections.map((section) => (
+              <Card 
+                key={section.id}
+                className="cursor-pointer transition-all duration-300 hover:scale-105 border-0"
+                style={{ backgroundColor: '#1a1a1a' }}
+                onClick={() => handleSectionClick(section.id)}
+              >
+                <CardHeader className="text-center pb-4">
+                  <div className="text-6xl mb-4">{section.icon}</div>
+                  <CardTitle className="text-xl mb-2" style={{ color: '#ffffff' }}>
+                    {section.name}
                   </CardTitle>
+                  <CardDescription style={{ color: '#cccccc' }}>
+                    {section.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} 
-                             variant="secondary"
-                             style={{ 
-                               backgroundColor: 'rgba(217, 251, 6, 0.1)',
-                               color: '#d9fb06',
-                               border: '1px solid rgba(217, 251, 6, 0.3)'
-                             }}>
-                        {tech}
-                      </Badge>
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <Badge 
+                      variant="secondary"
+                      style={{
+                        backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                        color: '#d4af37',
+                        border: '1px solid rgba(212, 175, 55, 0.3)'
+                      }}
+                    >
+                      {section.artworkCount} pieces
+                    </Badge>
+                    <ArrowRight className="h-5 w-5" style={{ color: '#d4af37' }} />
                   </div>
                 </CardContent>
               </Card>
@@ -276,180 +209,112 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <Projects />
-
-      {/* Experience Section */}
-      <Experience />
-
-      {/* Contact Section */}
-      <section className="py-24 px-8" id="contact" style={{ backgroundColor: '#302f2c' }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="mb-4"
-                style={{
-                  fontFamily: 'Inter, Arial, sans-serif',
-                  fontWeight: 900,
-                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                  lineHeight: '0.9',
-                  color: '#d9fb06',
-                  textTransform: 'uppercase'
-                }}>
-              Get In Touch
-            </h2>
-            <p style={{
-                 fontFamily: 'Inter, Arial, sans-serif',
-                 fontSize: '1.2rem',
-                 color: '#888680'
-               }}>
-              Ready to discuss your next project? Let's connect!
+      {/* Features Section */}
+      <section className="px-6 py-16" style={{ backgroundColor: '#1a1a1a' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4" style={{ color: '#ffffff' }}>
+              Revolutionary Museum Experience
+            </h3>
+            <p className="text-lg" style={{ color: '#888888' }}>
+              Cutting-edge technology meets timeless art
             </p>
           </div>
 
-          <Card className="border-0" style={{ backgroundColor: '#1a1c1b' }}>
-            <CardContent className="p-8">
-              <form onSubmit={handleContactSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
-                      Name *
-                    </label>
-                    <Input
-                      required
-                      value={contactForm.name}
-                      onChange={handleInputChange('name')}
-                      placeholder="Your full name"
-                      style={{
-                        backgroundColor: '#302f2c',
-                        border: '1px solid #888680',
-                        color: '#dfddd6'
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
-                      Email *
-                    </label>
-                    <Input
-                      type="email"
-                      required
-                      value={contactForm.email}
-                      onChange={handleInputChange('email')}
-                      placeholder="your.email@example.com"
-                      style={{
-                        backgroundColor: '#302f2c',
-                        border: '1px solid #888680',
-                        color: '#dfddd6'
-                      }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
-                    Subject *
-                  </label>
-                  <Input
-                    required
-                    value={contactForm.subject}
-                    onChange={handleInputChange('subject')}
-                    placeholder="Project discussion, collaboration opportunity, etc."
-                    style={{
-                      backgroundColor: '#302f2c',
-                      border: '1px solid #888680',
-                      color: '#dfddd6'
-                    }}
-                  />
-                </div>
-                <div>
-                  <label className="block mb-2 font-medium" style={{ color: '#d9fb06' }}>
-                    Message *
-                  </label>
-                  <Textarea
-                    required
-                    rows={5}
-                    value={contactForm.message}
-                    onChange={handleInputChange('message')}
-                    placeholder="Tell me about your project, timeline, and how I can help..."
-                    style={{
-                      backgroundColor: '#302f2c',
-                      border: '1px solid #888680',
-                      color: '#dfddd6',
-                      minHeight: '120px'
-                    }}
-                  />
-                </div>
-                <Button 
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full"
-                  style={{
-                    background: '#d9fb06',
-                    color: '#1a1c1b',
-                    border: 'none',
-                    borderRadius: '10rem',
-                    padding: '1rem 2rem',
-                    fontFamily: 'Inter, Arial, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    textTransform: 'uppercase',
-                    minHeight: '48px'
-                  }}
-                >
-                  {isSubmitting ? 'Sending...' : (
-                    <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                   style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
+                <Scan className="h-8 w-8" style={{ color: '#d4af37' }} />
+              </div>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: '#ffffff' }}>
+                NFC & QR Scanning
+              </h4>
+              <p className="text-sm" style={{ color: '#888888' }}>
+                Tap your phone near any artwork for instant information
+              </p>
+            </div>
 
-          <div className="mt-12 text-center">
-            <div className="flex justify-center space-x-8 mb-6">
-              <a href={`mailto:${portfolioData.personal.email}`}
-                 className="flex items-center gap-2 transition-opacity hover:opacity-70"
-                 style={{ color: '#d9fb06' }}>
-                <Mail className="h-5 w-5" />
-                <span>{portfolioData.personal.email}</span>
-              </a>
-              <a href={portfolioData.personal.linkedin}
-                 className="flex items-center gap-2 transition-opacity hover:opacity-70"
-                 style={{ color: '#d9fb06' }}>
-                <Linkedin className="h-5 w-5" />
-                <span>LinkedIn</span>
-              </a>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                   style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
+                <Camera className="h-8 w-8" style={{ color: '#d4af37' }} />
+              </div>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: '#ffffff' }}>
+                AR Integration
+              </h4>
+              <p className="text-sm" style={{ color: '#888888' }}>
+                See artworks come to life with augmented reality
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                   style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
+                <Users className="h-8 w-8" style={{ color: '#d4af37' }} />
+              </div>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: '#ffffff' }}>
+                Guided Tours
+              </h4>
+              <p className="text-sm" style={{ color: '#888888' }}>
+                Expert-curated journeys through art history
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                   style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
+                <Heart className="h-8 w-8" style={{ color: '#d4af37' }} />
+              </div>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: '#ffffff' }}>
+                Personal Collection
+              </h4>
+              <p className="text-sm" style={{ color: '#888888' }}>
+                Save and organize your favorite artworks
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-8" style={{ backgroundColor: '#302f2c' }}>
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href={portfolioData.personal.github} 
-               className="transition-opacity hover:opacity-70"
-               style={{ color: '#d9fb06' }}>
-              <Github className="h-6 w-6" />
-            </a>
-            <a href={portfolioData.personal.linkedin}
-               className="transition-opacity hover:opacity-70" 
-               style={{ color: '#d9fb06' }}>
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a href={`mailto:${portfolioData.personal.email}`}
-               className="transition-opacity hover:opacity-70"
-               style={{ color: '#d9fb06' }}>
-              <Mail className="h-6 w-6" />
-            </a>
-          </div>
-          <p style={{ color: '#888680' }}>
-            © 2024 {portfolioData.personal.name}. Built with React & FastAPI.
-          </p>
+      {/* Bottom Navigation */}
+      <div className="fixed bottom-0 left-0 right-0 px-6 py-4"
+           style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)', backdropFilter: 'blur(10px)' }}>
+        <div className="max-w-md mx-auto flex justify-around">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/')}
+            style={{ color: '#d4af37' }}
+          >
+            <MapPin className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleQuickScan}
+            style={{ color: '#ffffff' }}
+          >
+            <QrCode className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleARMode}
+            style={{ color: '#ffffff' }}
+          >
+            <Camera className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/favorites')}
+            style={{ color: '#ffffff' }}
+          >
+            <Heart className="h-5 w-5" />
+          </Button>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
