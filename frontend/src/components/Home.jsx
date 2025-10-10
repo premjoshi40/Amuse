@@ -45,7 +45,7 @@ const Home = () => {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full flex items-center justify-center"
                  style={{ backgroundColor: '#d4af37' }}>
-              <Gallery className="h-6 w-6 text-black" />
+              <LayoutGrid className="h-6 w-6 text-black" />
             </div>
             <div>
               <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>
