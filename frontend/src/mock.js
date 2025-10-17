@@ -105,28 +105,28 @@ export const museumData = {
 
     sculptures: [
       {
-        id: 'david',
-        title: 'David',
-        artist: 'Michelangelo',
-        year: '1501-1504',
-        image: 'https://placehold.co/600x900/e8a87c/ffffff?text=David+Sculpture',
+        id: 'discus-thrower',
+        title: 'Discobolus (Discus Thrower)',
+        artist: 'Myron',
+        year: 'c. 460-450 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Discobolus_Lancelotti_Massimo.jpg',
         category: 'sculptures',
-        location: 'Sculpture Hall - Renaissance Section',
+        location: 'Sculpture Hall - Ancient Greek Section',
         nfcCode: 'NFC004',
         qrCode: 'QR004',
-        description: 'A masterpiece of Renaissance sculpture depicting the Biblical hero David, representing the defense of civil liberties.',
-        artist_info: 'Michelangelo di Lodovico Buonarroti Simoni (1475-1564), Italian sculptor, painter, architect, and poet of the High Renaissance.',
-        historical_context: 'Commissioned by the Opera del Duomo for the Cathedral of Florence, symbolizing the defense of civil liberties embodied in the Republic of Florence.',
-        techniques: 'Carved from a single block of Carrara marble, unprecedented attention to anatomical detail and contrapposto stance',
-        cultural_significance: 'Considered the ideal of male beauty and symbol of the Renaissance, represents human strength and wrath',
-        dimensions: '5.17 m (17 ft) tall',
-        medium: 'Carrara marble',
-        provenance: 'Commissioned in 1501, originally placed in Piazza della Signoria, now in Galleria dell\'Accademia',
+        description: 'An ancient Greek sculpture depicting an athlete about to throw a discus, representing the ideal athletic form.',
+        artist_info: 'Myron was an ancient Greek sculptor from the mid-5th century BC, known for naturalistic poses.',
+        historical_context: 'Created during the Classical period of ancient Greece when artists achieved unprecedented realism in depicting the human body.',
+        techniques: 'Bronze casting with careful attention to anatomical detail and dynamic motion',
+        cultural_significance: 'Represents the Greek ideal of physical perfection and athletic prowess, one of the most famous ancient sculptures',
+        dimensions: 'Life-sized figure',
+        medium: 'Bronze (original), marble copies',
+        provenance: 'Original bronze lost, known through Roman marble copies',
         interesting_facts: [
-          'Carved from a single block of marble that had been abandoned for 25 years',
-          'The statue\'s hands are disproportionately large, symbolizing strength',
-          'David is depicted before his battle with Goliath, showing concentration and tension',
-          'Michelangelo was only 26 when he completed it'
+          'Shows an athlete frozen in motion at the moment before release',
+          'The twisted pose was revolutionary for its time',
+          'Original bronze statue has been lost, we only have marble Roman copies',
+          'Influenced Renaissance and neoclassical artists'
         ]
       },
       {
@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'terracotta-army',
-        title: 'Terracotta Army',
-        artist: 'Ancient Chinese Artisans',
-        year: 'c. 210-209 BC',
-        image: 'https://placehold.co/600x900/c77d58/ffffff?text=Terracotta+Army',
+        id: 'dead-sea-scrolls',
+        title: 'Dead Sea Scrolls',
+        artist: 'Ancient Jewish Scribes',
+        year: 'c. 300 BC - 100 AD',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Dead_sea_scrolls.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Chinese Section',
+        location: 'Ancient Civilizations Wing - Middle Eastern Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China, buried with him to protect him in the afterlife.',
-        artist_info: 'Created by thousands of ancient Chinese artisans and craftsmen during the Qin Dynasty.',
-        historical_context: 'Built to accompany the first Emperor of China into the afterlife, representing his imperial guard and showcasing Qin Dynasty military organization.',
-        techniques: 'Life-sized figures molded from terracotta clay, each warrior individually crafted with unique facial features and details',
-        cultural_significance: 'One of the greatest archaeological discoveries of the 20th century, reveals the power and artistry of ancient China',
-        dimensions: 'Over 8,000 soldiers, 130 chariots, 520 horses, and 150 cavalry horses',
-        medium: 'Terracotta clay',
-        provenance: 'Discovered in 1974 by local farmers near Xi\'an, China',
+        description: 'Ancient Jewish religious texts discovered in caves near the Dead Sea, including the oldest known manuscripts of biblical texts.',
+        artist_info: 'Created by Jewish scribes and religious communities living in the Judean Desert.',
+        historical_context: 'Written during the Second Temple period, providing invaluable insight into ancient Judaism and early biblical texts.',
+        techniques: 'Written on parchment and papyrus using ink, stored in pottery jars for preservation',
+        cultural_significance: 'One of the most significant archaeological discoveries, containing the oldest known biblical manuscripts',
+        dimensions: 'Over 900 documents, various sizes',
+        medium: 'Parchment, papyrus, and bronze',
+        provenance: 'Discovered in 1947 by Bedouin shepherds in caves near Qumran',
         interesting_facts: [
-          'Each warrior has unique facial features - no two are exactly alike',
-          'Originally painted in bright colors that faded upon excavation',
-          'Took over 700,000 workers to construct the entire mausoleum complex',
-          'Many sections remain unexcavated to preserve them for future technology'
+          'Discovered accidentally by a shepherd looking for a lost goat',
+          'Include texts from every book of the Hebrew Bible except Esther',
+          'Were hidden in jars in caves around 70 AD',
+          'Some scrolls are over 2,000 years old and remarkably well preserved'
         ]
       }
     ]
