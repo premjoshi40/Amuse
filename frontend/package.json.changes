@@ -1,0 +1,20 @@
+=== CHANGES TO package.json ===
+
+ADD this line after "private": true,:
+  "homepage": "https://premjoshi40.github.io/Amuse",
+
+ADD these lines to "scripts" section:
+  "predeploy": "yarn build",
+  "deploy": "gh-pages -d build"
+
+ADD this line to "devDependencies" section:
+  "gh-pages": "^6.3.0",
+
+=== FULL SCRIPTS SECTION SHOULD LOOK LIKE ===
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
