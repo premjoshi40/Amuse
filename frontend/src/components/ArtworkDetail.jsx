@@ -180,7 +180,7 @@ const ArtworkDetail = () => {
             <Button
               onClick={() => navigate('/ar', { state: { artworkId: artwork.id } })}
               style={{
-                background: 'linear-gradient(135deg, #6c5ce7, #5f27cd)',
+                background: 'linear-gradient(135deg, #6c5ce7, #10ac84)',
                 color: '#ffffff',
                 borderRadius: '25px',
                 boxShadow: '0 8px 25px rgba(108, 92, 231, 0.4)',
