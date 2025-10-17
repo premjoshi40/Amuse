@@ -13,14 +13,14 @@ export const museumData = {
       name: 'Sculptures', 
       icon: '🗿',
       description: 'Three-dimensional art from ancient to contemporary',
-      artworkCount: 3
+      artworkCount: 2
     },
     {
       id: 'historical',
       name: 'Historical Artifacts',
       icon: '🏺',
       description: 'Ancient relics and cultural treasures',
-      artworkCount: 3
+      artworkCount: 2
     }
   ],
 
@@ -104,31 +104,6 @@ export const museumData = {
     ],
 
     sculptures: [
-      {
-        id: 'winged-victory',
-        title: 'Winged Victory of Samothrace',
-        artist: 'Unknown Ancient Greek Artist',
-        year: 'c. 200-190 BC',
-        image: 'https://placehold.co/600x900/e3d5ca/5d4e37?text=Winged+Victory',
-        category: 'sculptures',
-        location: 'Sculpture Hall - Ancient Greek Section',
-        nfcCode: 'NFC004',
-        qrCode: 'QR004',
-        description: 'A Hellenistic sculpture of Nike, the Greek goddess of victory, one of the greatest masterpieces of ancient Greek sculpture.',
-        artist_info: 'Created by an unknown Greek sculptor during the Hellenistic period.',
-        historical_context: 'Likely created to commemorate a naval victory, originally positioned overlooking the sanctuary on Samothrace.',
-        techniques: 'Carved from Parian marble with masterful depiction of wind-blown drapery and movement',
-        cultural_significance: 'Considered one of the greatest masterpieces of Hellenistic sculpture, exemplifying dynamic motion',
-        dimensions: '2.44 m (8 ft) tall',
-        medium: 'Parian marble',
-        provenance: 'Discovered in 1863 on the island of Samothrace, now in the Louvre',
-        interesting_facts: [
-          'The head and arms have never been found',
-          'Depicts the goddess Nike landing on a ship\'s bow',
-          'The sculpture captures movement with incredible realism',
-          'Displayed prominently at the top of the Daru staircase in the Louvre'
-        ]
-      },
       {
         id: 'thinking-man',
         title: 'The Thinker',
@@ -230,31 +205,6 @@ export const museumData = {
           'Features lapis lazuli, quartz, and obsidian inlays',
           'Tutankhamun died at approximately age 19',
           'The tomb was the most intact pharaoh\'s tomb ever found'
-        ]
-      },
-      {
-        id: 'lewis-chessmen',
-        title: 'Lewis Chessmen',
-        artist: 'Unknown Norse Craftsmen',
-        year: 'c. 1150-1200 AD',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Chessmen_from_the_Isle_of_Lewis.jpg',
-        category: 'historical',
-        location: 'Ancient Civilizations Wing - Medieval Section',
-        nfcCode: 'NFC009',
-        qrCode: 'QR009',
-        description: 'A group of distinctive 12th-century chess pieces carved from walrus ivory and whale teeth, discovered on the Isle of Lewis in Scotland.',
-        artist_info: 'Created by Norse craftsmen, possibly in Trondheim, Norway.',
-        historical_context: 'Made during the medieval period when chess was becoming popular in Europe, likely created for a wealthy patron.',
-        techniques: 'Intricately carved from walrus ivory and whale teeth with expressive faces and detailed clothing',
-        cultural_significance: 'Among the most famous chess pieces in the world, providing insight into medieval Norse culture',
-        dimensions: 'Various sizes, pieces range from 3.5 to 10.2 cm tall',
-        medium: 'Walrus ivory and whale teeth',
-        provenance: 'Discovered in 1831 on the Isle of Lewis, Scotland, now in British Museum and National Museum of Scotland',
-        interesting_facts: [
-          '93 pieces were found, making up four incomplete chess sets',
-          'Some pieces have expressions showing distress or contemplation',
-          'Inspired the wizard chess pieces in Harry Potter films',
-          'Worth millions, one piece sold at auction for nearly £1 million'
         ]
       }
     ]
