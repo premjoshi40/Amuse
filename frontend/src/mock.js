@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'code-hammurabi',
-        title: 'Code of Hammurabi',
-        artist: 'Ancient Babylonian Scribes',
-        year: 'c. 1754 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/P1050763_Louvre_code_Hammurabi_face_rwk.JPG',
+        id: 'bust-nefertiti',
+        title: 'Bust of Nefertiti',
+        artist: 'Thutmose',
+        year: 'c. 1345 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Nofretete_Neues_Museum.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Mesopotamian Section',
+        location: 'Ancient Civilizations Wing - Egyptian Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A Babylonian stone stele inscribed with one of the oldest and most complete written legal codes, established by King Hammurabi.',
-        artist_info: 'Commissioned by Hammurabi, sixth king of Babylon, inscribed by royal scribes.',
-        historical_context: 'Created during the reign of Hammurabi to establish uniform laws across his empire, one of the earliest examples of written law.',
-        techniques: 'Carved in cuneiform script on a black diorite stele, topped with a relief showing Hammurabi receiving laws from Shamash',
-        cultural_significance: 'One of the oldest deciphered writings, establishing the principle of "eye for an eye" justice',
-        dimensions: '2.25 m (7.4 ft) tall',
-        medium: 'Basalt stele',
-        provenance: 'Discovered in 1901 in Susa, Iran, now in the Louvre Museum',
+        description: 'A painted limestone bust of Nefertiti, the Great Royal Wife of Egyptian pharaoh Akhenaten, one of the most copied works of ancient Egypt.',
+        artist_info: 'Sculpted by Thutmose, the official court sculptor of Akhenaten.',
+        historical_context: 'Created during the Amarna period when Akhenaten and Nefertiti revolutionized Egyptian art and religion.',
+        techniques: 'Carved from limestone and covered with layers of painted stucco, with inlaid eyes',
+        cultural_significance: 'Icon of feminine beauty and one of the most famous artworks from ancient Egypt',
+        dimensions: '50 cm (20 in) tall',
+        medium: 'Limestone and stucco',
+        provenance: 'Discovered in 1912 in Thutmose\'s workshop in Amarna, now in Neues Museum, Berlin',
         interesting_facts: [
-          'Contains 282 laws covering everything from trade to family relationships',
-          'Established the famous principle of "an eye for an eye"',
-          'One of the earliest examples of presumption of innocence',
-          'The laws varied based on social class - nobles, commoners, and slaves'
+          'One eye is missing - possibly left unfinished intentionally as a model',
+          'The painted surface is remarkably well-preserved after 3,300 years',
+          'Nefertiti means "the beautiful one has come"',
+          'Egypt has repeatedly requested its return from Germany'
         ]
       }
     ]
