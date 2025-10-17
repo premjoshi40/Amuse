@@ -134,7 +134,7 @@ export const museumData = {
         title: 'The Thinker',
         artist: 'Auguste Rodin',
         year: '1904',
-        image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=800&fit=crop',
+        image: 'https://picsum.photos/400/600?random=2',
         category: 'sculptures',
         location: 'Sculpture Hall - Modern Section',
         nfcCode: 'NFC005',
