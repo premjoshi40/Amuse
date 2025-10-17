@@ -109,7 +109,7 @@ export const museumData = {
         title: 'Venus de Milo',
         artist: 'Alexandros of Antioch',
         year: 'c. 130-100 BC',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=800&fit=crop',
+        image: 'https://picsum.photos/400/600?random=1',
         category: 'sculptures',
         location: 'Sculpture Hall - Ancient Greek Section',
         nfcCode: 'NFC004',
