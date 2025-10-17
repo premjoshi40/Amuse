@@ -86,9 +86,9 @@ const Scanner = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
-      <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f' }}>
+      <header className="px-6 py-4 border-b" style={{ borderColor: '#e5e7eb' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Button
             variant="ghost"
@@ -101,10 +101,10 @@ const Scanner = () => {
           </Button>
           
           <div className="text-center">
-            <h1 className="text-xl font-bold" style={{ color: '#ffffff' }}>
+            <h1 className="text-xl font-bold" style={{ color: '#1f2937' }}>
               Scanner
             </h1>
-            <p className="text-sm" style={{ color: '#888888' }}>
+            <p className="text-sm" style={{ color: '#6b7280' }}>
               Scan QR codes or use NFC to discover artworks
             </p>
           </div>
@@ -118,14 +118,14 @@ const Scanner = () => {
         <div className="max-w-md mx-auto">
           
           {/* Scanner Type Selection */}
-          <div className="flex mb-8 p-1 rounded-lg" style={{ backgroundColor: '#1a1a1a' }}>
+          <div className="flex mb-8 p-1 rounded-lg border" style={{ backgroundColor: '#f9fafb', borderColor: '#e5e7eb' }}>
             <Button
               variant={scanType === 'qr' ? 'default' : 'ghost'}
               className="flex-1"
               onClick={() => setScanType('qr')}
               style={{
                 backgroundColor: scanType === 'qr' ? '#d4af37' : 'transparent',
-                color: scanType === 'qr' ? '#000000' : '#ffffff'
+                color: scanType === 'qr' ? '#ffffff' : '#1f2937'
               }}
             >
               <QrCode className="h-4 w-4 mr-2" />
@@ -137,7 +137,7 @@ const Scanner = () => {
               onClick={() => setScanType('nfc')}
               style={{
                 backgroundColor: scanType === 'nfc' ? '#d4af37' : 'transparent',
-                color: scanType === 'nfc' ? '#000000' : '#ffffff'
+                color: scanType === 'nfc' ? '#ffffff' : '#1f2937'
               }}
             >
               <Wifi className="h-4 w-4 mr-2" />
@@ -146,12 +146,12 @@ const Scanner = () => {
           </div>
 
           {/* Scanner Area */}
-          <Card className="border-0 mb-8" style={{ backgroundColor: '#1a1a1a' }}>
+          <Card className="border mb-8" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
             <CardContent className="p-8 text-center">
               {isScanning ? (
                 <div className="space-y-4">
                   <Loader2 className="h-16 w-16 mx-auto animate-spin" style={{ color: '#d4af37' }} />
-                  <p style={{ color: '#ffffff' }}>
+                  <p style={{ color: '#1f2937' }}>
                     Scanning {scanType.toUpperCase()}...
                   </p>
                 </div>
@@ -165,7 +165,7 @@ const Scanner = () => {
                       <Wifi className="h-16 w-16" style={{ color: '#d4af37' }} />
                     )}
                   </div>
-                  <p style={{ color: '#ffffff' }}>
+                  <p style={{ color: '#1f2937' }}>
                     {scanType === 'qr' 
                       ? 'Point your camera at a QR code'
                       : 'Hold your phone near an NFC tag'
@@ -179,7 +179,7 @@ const Scanner = () => {
                     }}
                     style={{
                       backgroundColor: '#d4af37',
-                      color: '#000000'
+                      color: '#ffffff'
                     }}
                   >
                     <Camera className="h-4 w-4 mr-2" />
@@ -191,9 +191,9 @@ const Scanner = () => {
           </Card>
 
           {/* Quick Test Buttons */}
-          <Card className="border-0 mb-8" style={{ backgroundColor: '#1a1a1a' }}>
+          <Card className="border mb-8" style={{ backgroundColor: '#f9fafb', borderColor: '#e5e7eb' }}>
             <CardHeader>
-              <CardTitle className="text-center" style={{ color: '#ffffff' }}>
+              <CardTitle className="text-center" style={{ color: '#1f2937' }}>
                 Demo Codes
               </CardTitle>
             </CardHeader>
@@ -249,15 +249,15 @@ const Scanner = () => {
 
           {/* Scan Result */}
           {scanResult && (
-            <Card className="border-0" style={{ backgroundColor: '#1a1a1a' }}>
+            <Card className="border" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
               <CardHeader>
                 <div className="flex items-center space-x-2">
                   {scanResult.success ? (
-                    <CheckCircle className="h-5 w-5" style={{ color: '#4ade80' }} />
+                    <CheckCircle className="h-5 w-5" style={{ color: '#10b981' }} />
                   ) : (
-                    <AlertCircle className="h-5 w-5" style={{ color: '#f87171' }} />
+                    <AlertCircle className="h-5 w-5" style={{ color: '#ef4444' }} />
                   )}
-                  <CardTitle style={{ color: '#ffffff' }}>
+                  <CardTitle style={{ color: '#1f2937' }}>
                     {scanResult.success ? 'Artwork Found!' : 'Scan Failed'}
                   </CardTitle>
                 </div>
@@ -272,7 +272,7 @@ const Scanner = () => {
                         className="w-20 h-20 object-cover rounded-lg"
                       />
                       <div className="flex-1">
-                        <h3 className="font-semibold mb-1" style={{ color: '#ffffff' }}>
+                        <h3 className="font-semibold mb-1" style={{ color: '#1f2937' }}>
                           {scanResult.artwork.title}
                         </h3>
                         <p className="text-sm mb-2" style={{ color: '#d4af37' }}>
@@ -295,14 +295,14 @@ const Scanner = () => {
                       className="w-full"
                       style={{
                         backgroundColor: '#d4af37',
-                        color: '#000000'
+                        color: '#ffffff'
                       }}
                     >
                       View Artwork Details
                     </Button>
                   </div>
                 ) : (
-                  <p style={{ color: '#f87171' }}>
+                  <p style={{ color: '#ef4444' }}>
                     {scanResult.error}
                   </p>
                 )}
@@ -314,13 +314,13 @@ const Scanner = () => {
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 px-6 py-4"
-           style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)', backdropFilter: 'blur(10px)' }}>
+           style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderTop: '1px solid #e5e7eb' }}>
         <div className="max-w-md mx-auto flex justify-around">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => navigate('/')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <QrCode className="h-5 w-5" />
           </Button>
@@ -336,7 +336,7 @@ const Scanner = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/ar')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Camera className="h-5 w-5" />
           </Button>
@@ -344,7 +344,7 @@ const Scanner = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/favorites')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <CheckCircle className="h-5 w-5" />
           </Button>

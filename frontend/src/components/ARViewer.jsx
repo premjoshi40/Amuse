@@ -88,9 +88,9 @@ const ARViewer = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
-      <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f' }}>
+      <header className="px-6 py-4 border-b" style={{ borderColor: '#e5e7eb' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Button
             variant="ghost"
@@ -103,10 +103,10 @@ const ARViewer = () => {
           </Button>
           
           <div className="text-center">
-            <h1 className="text-xl font-bold" style={{ color: '#ffffff' }}>
+            <h1 className="text-xl font-bold" style={{ color: '#1f2937' }}>
               AR Experience
             </h1>
-            <p className="text-sm" style={{ color: '#888888' }}>
+            <p className="text-sm" style={{ color: '#6b7280' }}>
               Immersive artwork visualization
             </p>
           </div>
@@ -115,7 +115,7 @@ const ARViewer = () => {
             variant="ghost"
             size="sm"
             onClick={toggleAudio}
-            style={{ color: audioEnabled ? '#d4af37' : '#888888' }}
+            style={{ color: audioEnabled ? '#d4af37' : '#6b7280' }}
           >
             {audioEnabled ? <Volume2 className="h-5 w-5" /> : <VolumeX className="h-5 w-5" />}
           </Button>
@@ -131,7 +131,7 @@ const ARViewer = () => {
             <div className="max-w-md mx-auto text-center">
               
               {artwork && (
-                <Card className="border-0 mb-8" style={{ backgroundColor: '#1a1a1a' }}>
+                <Card className="border mb-8" style={{ backgroundColor: '#f9fafb', borderColor: '#e5e7eb' }}>
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <img
@@ -140,7 +140,7 @@ const ARViewer = () => {
                         className="w-16 h-16 object-cover rounded-lg"
                       />
                       <div className="text-left">
-                        <h3 className="font-semibold mb-1" style={{ color: '#ffffff' }}>
+                        <h3 className="font-semibold mb-1" style={{ color: '#1f2937' }}>
                           {artwork.title}
                         </h3>
                         <p className="text-sm" style={{ color: '#d4af37' }}>
@@ -153,8 +153,8 @@ const ARViewer = () => {
               )}
 
               <div className="space-y-6">
-                <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center"
-                     style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
+                <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center border-2"
+                     style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: '#d4af37' }}>
                   {isLoading ? (
                     <Loader2 className="h-16 w-16 animate-spin" style={{ color: '#d4af37' }} />
                   ) : (
@@ -163,10 +163,10 @@ const ARViewer = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold" style={{ color: '#ffffff' }}>
+                  <h2 className="text-2xl font-bold" style={{ color: '#1f2937' }}>
                     Activate AR Mode
                   </h2>
-                  <p style={{ color: '#888888' }}>
+                  <p style={{ color: '#6b7280' }}>
                     Experience this artwork in 3D with interactive elements and detailed information overlays
                   </p>
                 </div>
@@ -177,7 +177,7 @@ const ARViewer = () => {
                   size="lg"
                   style={{
                     backgroundColor: '#d4af37',
-                    color: '#000000',
+                    color: '#ffffff',
                     padding: '1rem 2rem'
                   }}
                 >
@@ -186,14 +186,14 @@ const ARViewer = () => {
               </div>
 
               {/* Instructions */}
-              <Card className="border-0 mt-8" style={{ backgroundColor: '#1a1a1a' }}>
+              <Card className="border mt-8" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
                 <CardHeader>
-                  <CardTitle className="text-center" style={{ color: '#ffffff' }}>
+                  <CardTitle className="text-center" style={{ color: '#1f2937' }}>
                     AR Instructions
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3 text-sm" style={{ color: '#cccccc' }}>
+                  <div className="space-y-3 text-sm" style={{ color: '#4b5563' }}>
                     <div className="flex items-center space-x-3">
                       <Smartphone className="h-4 w-4" style={{ color: '#d4af37' }} />
                       <span>Hold your phone steady and point at the artwork</span>
@@ -215,15 +215,15 @@ const ARViewer = () => {
           /* AR Active Screen */
           <div className="relative h-screen">
             {/* Simulated Camera View */}
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900">
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-200 to-gray-300">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center space-y-4">
                   <div className="w-64 h-64 mx-auto rounded-lg border-2 border-dashed flex items-center justify-center"
                        style={{ borderColor: '#d4af37' }}>
                     <div className="text-center">
                       <Camera className="h-16 w-16 mx-auto mb-4" style={{ color: '#d4af37' }} />
-                      <p style={{ color: '#ffffff' }}>AR Camera View</p>
-                      <p className="text-sm" style={{ color: '#888888' }}>
+                      <p style={{ color: '#1f2937' }}>AR Camera View</p>
+                      <p className="text-sm" style={{ color: '#6b7280' }}>
                         Point at artwork to see 3D overlay
                       </p>
                     </div>
@@ -248,7 +248,7 @@ const ARViewer = () => {
               {/* AR Overlay Elements */}
               <div className="absolute top-20 left-6 right-6">
                 <div className="flex justify-between items-start">
-                  <Card className="border-0" style={{ backgroundColor: 'rgba(26, 26, 26, 0.8)' }}>
+                  <Card className="border" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', borderColor: '#e5e7eb' }}>
                     <CardContent className="p-3">
                       <p className="text-sm" style={{ color: '#d4af37' }}>
                         {artwork?.title || 'Scan an artwork to begin'}
@@ -262,8 +262,8 @@ const ARViewer = () => {
                       size="sm"
                       onClick={toggleAnimation}
                       style={{
-                        backgroundColor: 'rgba(26, 26, 26, 0.8)',
-                        color: isPlaying ? '#d4af37' : '#ffffff'
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        color: isPlaying ? '#d4af37' : '#1f2937'
                       }}
                     >
                       {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
@@ -272,8 +272,8 @@ const ARViewer = () => {
                       variant="ghost"
                       size="sm"
                       style={{
-                        backgroundColor: 'rgba(26, 26, 26, 0.8)',
-                        color: '#ffffff'
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        color: '#1f2937'
                       }}
                     >
                       <Maximize2 className="h-4 w-4" />
@@ -285,14 +285,14 @@ const ARViewer = () => {
               {/* AR Mode Selector */}
               <div className="absolute bottom-32 left-6 right-6">
                 <div className="flex justify-center space-x-2 p-2 rounded-lg"
-                     style={{ backgroundColor: 'rgba(26, 26, 26, 0.8)' }}>
+                     style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
                   <Button
                     variant={arMode === '3d' ? 'default' : 'ghost'}
                     size="sm"
                     onClick={() => switchMode('3d')}
                     style={{
                       backgroundColor: arMode === '3d' ? '#d4af37' : 'transparent',
-                      color: arMode === '3d' ? '#000000' : '#ffffff'
+                      color: arMode === '3d' ? '#ffffff' : '#1f2937'
                     }}
                   >
                     3D View
@@ -303,7 +303,7 @@ const ARViewer = () => {
                     onClick={() => switchMode('info')}
                     style={{
                       backgroundColor: arMode === 'info' ? '#d4af37' : 'transparent',
-                      color: arMode === 'info' ? '#000000' : '#ffffff'
+                      color: arMode === 'info' ? '#ffffff' : '#1f2937'
                     }}
                   >
                     Info
@@ -314,7 +314,7 @@ const ARViewer = () => {
                     onClick={() => switchMode('animation')}
                     style={{
                       backgroundColor: arMode === 'animation' ? '#d4af37' : 'transparent',
-                      color: arMode === 'animation' ? '#000000' : '#ffffff'
+                      color: arMode === 'animation' ? '#ffffff' : '#1f2937'
                     }}
                   >
                     Animation
@@ -329,8 +329,8 @@ const ARViewer = () => {
                   variant="ghost"
                   size="sm"
                   style={{
-                    backgroundColor: 'rgba(26, 26, 26, 0.8)',
-                    color: '#ffffff'
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    color: '#1f2937'
                   }}
                 >
                   <RotateCcw className="h-4 w-4 mr-2" />
@@ -344,13 +344,13 @@ const ARViewer = () => {
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 px-6 py-4"
-           style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)', backdropFilter: 'blur(10px)' }}>
+           style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderTop: '1px solid #e5e7eb' }}>
         <div className="max-w-md mx-auto flex justify-around">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => navigate('/')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Info className="h-5 w-5" />
           </Button>
@@ -358,7 +358,7 @@ const ARViewer = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/scanner')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Camera className="h-5 w-5" />
           </Button>
@@ -374,7 +374,7 @@ const ARViewer = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/favorites')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Volume2 className="h-5 w-5" />
           </Button>
