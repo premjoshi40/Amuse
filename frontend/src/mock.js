@@ -13,14 +13,14 @@ export const museumData = {
       name: 'Sculptures', 
       icon: '🗿',
       description: 'Three-dimensional art from ancient to contemporary',
-      artworkCount: 2
+      artworkCount: 3
     },
     {
       id: 'historical',
       name: 'Historical Artifacts',
       icon: '🏺',
       description: 'Ancient relics and cultural treasures',
-      artworkCount: 2
+      artworkCount: 3
     }
   ],
 
@@ -153,6 +153,31 @@ export const museumData = {
           'Survived an attack with a hammer in 1972',
           'Michelangelo was only 24 when he completed it'
         ]
+      },
+      {
+        id: 'the-kiss',
+        title: 'The Kiss',
+        artist: 'Auguste Rodin',
+        year: '1889',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/The_Kiss_%28Le_Baiser%29_by_Auguste_Rodin%2C_Mus%C3%A9e_Rodin_-_2.jpg',
+        category: 'sculptures',
+        location: 'Sculpture Hall - Modern Section',
+        nfcCode: 'NFC010',
+        qrCode: 'QR010',
+        description: 'A marble sculpture depicting two lovers embracing, one of Rodin\'s most popular works.',
+        artist_info: 'Auguste Rodin (1840-1917), French sculptor and founder of modern sculpture.',
+        historical_context: 'Originally created for The Gates of Hell, inspired by Paolo and Francesca from Dante\'s Inferno.',
+        techniques: 'Carved from marble with exceptional detail showing emotion and intimacy',
+        cultural_significance: 'One of the most celebrated representations of romantic love in art history',
+        dimensions: '181.5 cm × 112.5 cm × 117 cm',
+        medium: 'Marble',
+        provenance: 'Multiple versions exist, original in Musée Rodin, Paris',
+        interesting_facts: [
+          'Originally titled "Francesca da Rimini" after characters in Dante\'s Inferno',
+          'Was considered too sensual when first exhibited',
+          'Multiple marble and bronze versions were created',
+          'One of the most reproduced sculptures in the world'
+        ]
       }
     ],
 
@@ -205,6 +230,31 @@ export const museumData = {
           'Features lapis lazuli, quartz, and obsidian inlays',
           'Tutankhamun died at approximately age 19',
           'The tomb was the most intact pharaoh\'s tomb ever found'
+        ]
+      },
+      {
+        id: 'sutton-hoo-helmet',
+        title: 'Sutton Hoo Helmet',
+        artist: 'Anglo-Saxon Craftsmen',
+        year: 'c. 600-625 AD',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/6/65/Sutton_Hoo_helmet_2016.png',
+        category: 'historical',
+        location: 'Ancient Civilizations Wing - Medieval Section',
+        nfcCode: 'NFC011',
+        qrCode: 'QR011',
+        description: 'An ornate Anglo-Saxon ceremonial helmet discovered in a ship burial, one of the most significant archaeological finds in British history.',
+        artist_info: 'Created by skilled Anglo-Saxon metalworkers during the early medieval period.',
+        historical_context: 'Part of a lavish ship burial, likely belonging to King Rædwald of East Anglia or another high-status individual.',
+        techniques: 'Iron framework with bronze, silver, and gold decorative elements, featuring intricate designs',
+        cultural_significance: 'Icon of early medieval England, shows the sophistication of Anglo-Saxon craftsmanship',
+        dimensions: 'Approximately 31.8 cm tall',
+        medium: 'Iron, bronze, silver, gold, and garnets',
+        provenance: 'Discovered in 1939 at Sutton Hoo, Suffolk, now in the British Museum',
+        interesting_facts: [
+          'Found crushed into hundreds of fragments and painstakingly reconstructed',
+          'Features a distinctive face mask with eyebrows, nose, and mustache',
+          'One of only four known complete Anglo-Saxon helmets',
+          'The burial included an entire 27-meter-long ship'
         ]
       }
     ]
