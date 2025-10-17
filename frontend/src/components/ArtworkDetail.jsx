@@ -57,22 +57,21 @@ const ArtworkDetail = () => {
     } else {
       // Fallback - copy to clipboard
       navigator.clipboard.writeText(window.location.href);
-      // You could show a toast here
     }
   };
 
   if (!artwork) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#0f0f0f' }}>
-        <p style={{ color: '#ffffff' }}>Artwork not found</p>
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#ffffff' }}>
+        <p style={{ color: '#1f2937' }}>Artwork not found</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
-      <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f' }}>
+      <header className="px-6 py-4 border-b" style={{ borderColor: '#e5e7eb' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Button
             variant="ghost"
@@ -90,7 +89,7 @@ const ArtworkDetail = () => {
               size="sm"
               onClick={toggleFavorite}
               style={{
-                color: favorites.includes(artwork.id) ? '#ff6b6b' : '#888888'
+                color: favorites.includes(artwork.id) ? '#dc2626' : '#6b7280'
               }}
             >
               <Heart 
@@ -143,13 +142,13 @@ const ArtworkDetail = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="px-6 py-6" style={{ backgroundColor: '#1a1a1a' }}>
+        <div className="px-6 py-6" style={{ backgroundColor: '#f9fafb' }}>
           <div className="max-w-7xl mx-auto flex justify-center space-x-4">
             <Button
               onClick={() => navigate('/scanner', { state: { targetQR: artwork.qrCode } })}
               style={{
                 backgroundColor: '#d4af37',
-                color: '#000000',
+                color: '#ffffff',
                 borderRadius: '12px'
               }}
             >
@@ -176,11 +175,11 @@ const ArtworkDetail = () => {
         <div className="px-6 py-6">
           <div className="max-w-4xl mx-auto">
             <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="grid w-full grid-cols-4" style={{ backgroundColor: '#1a1a1a' }}>
+              <TabsList className="grid w-full grid-cols-4" style={{ backgroundColor: '#f9fafb' }}>
                 <TabsTrigger 
                   value="overview"
                   style={{ 
-                    color: activeTab === 'overview' ? '#000000' : '#888888',
+                    color: activeTab === 'overview' ? '#ffffff' : '#6b7280',
                     backgroundColor: activeTab === 'overview' ? '#d4af37' : 'transparent'
                   }}
                 >
@@ -190,7 +189,7 @@ const ArtworkDetail = () => {
                 <TabsTrigger 
                   value="history"
                   style={{ 
-                    color: activeTab === 'history' ? '#000000' : '#888888',
+                    color: activeTab === 'history' ? '#ffffff' : '#6b7280',
                     backgroundColor: activeTab === 'history' ? '#d4af37' : 'transparent'
                   }}
                 >
@@ -200,7 +199,7 @@ const ArtworkDetail = () => {
                 <TabsTrigger 
                   value="technique"
                   style={{ 
-                    color: activeTab === 'technique' ? '#000000' : '#888888',
+                    color: activeTab === 'technique' ? '#ffffff' : '#6b7280',
                     backgroundColor: activeTab === 'technique' ? '#d4af37' : 'transparent'
                   }}
                 >
@@ -210,7 +209,7 @@ const ArtworkDetail = () => {
                 <TabsTrigger 
                   value="details"
                   style={{ 
-                    color: activeTab === 'details' ? '#000000' : '#888888',
+                    color: activeTab === 'details' ? '#ffffff' : '#6b7280',
                     backgroundColor: activeTab === 'details' ? '#d4af37' : 'transparent'
                   }}
                 >
@@ -220,12 +219,12 @@ const ArtworkDetail = () => {
               </TabsList>
 
               <TabsContent value="overview" className="mt-6">
-                <Card className="border-0" style={{ backgroundColor: '#1a1a1a' }}>
+                <Card className="border" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
                   <CardHeader>
-                    <CardTitle style={{ color: '#ffffff' }}>About This Artwork</CardTitle>
+                    <CardTitle style={{ color: '#1f2937' }}>About This Artwork</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-base leading-relaxed mb-6" style={{ color: '#cccccc' }}>
+                    <p className="text-base leading-relaxed mb-6" style={{ color: '#4b5563' }}>
                       {artwork.description}
                     </p>
                     
@@ -235,7 +234,7 @@ const ArtworkDetail = () => {
                           <MapPin className="h-4 w-4 mr-2" />
                           Location
                         </h4>
-                        <p style={{ color: '#cccccc' }}>{artwork.location}</p>
+                        <p style={{ color: '#4b5563' }}>{artwork.location}</p>
                       </div>
                       
                       <div>
@@ -258,38 +257,38 @@ const ArtworkDetail = () => {
               </TabsContent>
 
               <TabsContent value="history" className="mt-6">
-                <Card className="border-0" style={{ backgroundColor: '#1a1a1a' }}>
+                <Card className="border" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
                   <CardHeader>
-                    <CardTitle style={{ color: '#ffffff' }}>Historical Context</CardTitle>
+                    <CardTitle style={{ color: '#1f2937' }}>Historical Context</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
                       <h4 className="font-semibold mb-3" style={{ color: '#d4af37' }}>About the Artist</h4>
-                      <p style={{ color: '#cccccc' }}>{artwork.artist_info}</p>
+                      <p style={{ color: '#4b5563' }}>{artwork.artist_info}</p>
                     </div>
                     
                     <div>
                       <h4 className="font-semibold mb-3" style={{ color: '#d4af37' }}>Historical Background</h4>
-                      <p style={{ color: '#cccccc' }}>{artwork.historical_context}</p>
+                      <p style={{ color: '#4b5563' }}>{artwork.historical_context}</p>
                     </div>
 
                     <div>
                       <h4 className="font-semibold mb-3" style={{ color: '#d4af37' }}>Cultural Significance</h4>
-                      <p style={{ color: '#cccccc' }}>{artwork.cultural_significance}</p>
+                      <p style={{ color: '#4b5563' }}>{artwork.cultural_significance}</p>
                     </div>
                   </CardContent>
                 </Card>
               </TabsContent>
 
               <TabsContent value="technique" className="mt-6">
-                <Card className="border-0" style={{ backgroundColor: '#1a1a1a' }}>
+                <Card className="border" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
                   <CardHeader>
-                    <CardTitle style={{ color: '#ffffff' }}>Artistic Techniques</CardTitle>
+                    <CardTitle style={{ color: '#1f2937' }}>Artistic Techniques</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
                       <h4 className="font-semibold mb-3" style={{ color: '#d4af37' }}>Medium & Techniques</h4>
-                      <p style={{ color: '#cccccc' }}>{artwork.techniques}</p>
+                      <p style={{ color: '#4b5563' }}>{artwork.techniques}</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
@@ -298,7 +297,7 @@ const ArtworkDetail = () => {
                           <Palette className="h-4 w-4 mr-2" />
                           Medium
                         </h4>
-                        <p style={{ color: '#cccccc' }}>{artwork.medium}</p>
+                        <p style={{ color: '#4b5563' }}>{artwork.medium}</p>
                       </div>
                       
                       <div>
@@ -306,7 +305,7 @@ const ArtworkDetail = () => {
                           <Ruler className="h-4 w-4 mr-2" />
                           Dimensions
                         </h4>
-                        <p style={{ color: '#cccccc' }}>{artwork.dimensions}</p>
+                        <p style={{ color: '#4b5563' }}>{artwork.dimensions}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -314,14 +313,14 @@ const ArtworkDetail = () => {
               </TabsContent>
 
               <TabsContent value="details" className="mt-6">
-                <Card className="border-0" style={{ backgroundColor: '#1a1a1a' }}>
+                <Card className="border" style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}>
                   <CardHeader>
-                    <CardTitle style={{ color: '#ffffff' }}>Interesting Facts</CardTitle>
+                    <CardTitle style={{ color: '#1f2937' }}>Interesting Facts</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
                       <h4 className="font-semibold mb-3" style={{ color: '#d4af37' }}>Provenance</h4>
-                      <p style={{ color: '#cccccc' }}>{artwork.provenance}</p>
+                      <p style={{ color: '#4b5563' }}>{artwork.provenance}</p>
                     </div>
 
                     <div>
@@ -331,7 +330,7 @@ const ArtworkDetail = () => {
                           <li key={index} className="flex items-start space-x-3">
                             <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
                                  style={{ backgroundColor: '#d4af37' }}></div>
-                            <span style={{ color: '#cccccc' }}>{fact}</span>
+                            <span style={{ color: '#4b5563' }}>{fact}</span>
                           </li>
                         ))}
                       </ul>
@@ -346,13 +345,13 @@ const ArtworkDetail = () => {
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 px-6 py-4"
-           style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)', backdropFilter: 'blur(10px)' }}>
+           style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderTop: '1px solid #e5e7eb' }}>
         <div className="max-w-md mx-auto flex justify-around">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => navigate('/')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <MapPin className="h-5 w-5" />
           </Button>
@@ -360,7 +359,7 @@ const ArtworkDetail = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/scanner')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <QrCode className="h-5 w-5" />
           </Button>
@@ -368,7 +367,7 @@ const ArtworkDetail = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/ar')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Camera className="h-5 w-5" />
           </Button>
@@ -376,7 +375,7 @@ const ArtworkDetail = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/favorites')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Heart className="h-5 w-5" />
           </Button>

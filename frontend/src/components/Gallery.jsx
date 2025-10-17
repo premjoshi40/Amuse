@@ -45,16 +45,16 @@ const Gallery = () => {
 
   if (!section) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#0f0f0f' }}>
-        <p style={{ color: '#ffffff' }}>Gallery not found</p>
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#ffffff' }}>
+        <p style={{ color: '#1f2937' }}>Gallery not found</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
-      <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f' }}>
+      <header className="px-6 py-4 border-b" style={{ borderColor: '#e5e7eb' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Button
@@ -66,10 +66,10 @@ const Gallery = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <div>
-              <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>
+              <h1 className="text-2xl font-bold" style={{ color: '#1f2937' }}>
                 {section.name}
               </h1>
-              <p className="text-sm" style={{ color: '#888888' }}>
+              <p className="text-sm" style={{ color: '#6b7280' }}>
                 {section.description}
               </p>
             </div>
@@ -82,7 +82,7 @@ const Gallery = () => {
               onClick={() => setViewMode('grid')}
               style={{
                 backgroundColor: viewMode === 'grid' ? '#d4af37' : 'transparent',
-                color: viewMode === 'grid' ? '#000000' : '#d4af37'
+                color: viewMode === 'grid' ? '#ffffff' : '#d4af37'
               }}
             >
               <Grid3X3 className="h-4 w-4" />
@@ -93,7 +93,7 @@ const Gallery = () => {
               onClick={() => setViewMode('list')}
               style={{
                 backgroundColor: viewMode === 'list' ? '#d4af37' : 'transparent',
-                color: viewMode === 'list' ? '#000000' : '#d4af37'
+                color: viewMode === 'list' ? '#ffffff' : '#d4af37'
               }}
             >
               <List className="h-4 w-4" />
@@ -132,10 +132,10 @@ const Gallery = () => {
             {artworks.map((artwork) => (
               <Card 
                 key={artwork.id}
-                className={`cursor-pointer transition-all duration-300 hover:scale-105 border-0 ${
+                className={`cursor-pointer transition-all duration-300 hover:scale-105 border ${
                   viewMode === 'list' ? 'flex flex-row' : ''
                 }`}
-                style={{ backgroundColor: '#1a1a1a' }}
+                style={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb' }}
                 onClick={() => handleArtworkClick(artwork.id)}
               >
                 <div className={viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}>
@@ -152,13 +152,13 @@ const Gallery = () => {
                   <CardHeader className={viewMode === 'list' ? 'pb-2' : ''}>
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
-                        <CardTitle className="text-lg mb-2" style={{ color: '#ffffff' }}>
+                        <CardTitle className="text-lg mb-2" style={{ color: '#1f2937' }}>
                           {artwork.title}
                         </CardTitle>
                         <p className="text-sm mb-1" style={{ color: '#d4af37' }}>
                           {artwork.artist}
                         </p>
-                        <p className="text-xs" style={{ color: '#888888' }}>
+                        <p className="text-xs" style={{ color: '#6b7280' }}>
                           {artwork.year}
                         </p>
                       </div>
@@ -170,7 +170,7 @@ const Gallery = () => {
                           toggleFavorite(artwork.id);
                         }}
                         style={{
-                          color: favorites.includes(artwork.id) ? '#ff6b6b' : '#888888'
+                          color: favorites.includes(artwork.id) ? '#dc2626' : '#6b7280'
                         }}
                       >
                         <Heart 
@@ -184,15 +184,15 @@ const Gallery = () => {
                   <CardContent className={viewMode === 'list' ? 'pt-0' : ''}>
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4" style={{ color: '#888888' }} />
-                        <span className="text-sm" style={{ color: '#888888' }}>
+                        <MapPin className="h-4 w-4" style={{ color: '#6b7280' }} />
+                        <span className="text-sm" style={{ color: '#6b7280' }}>
                           {artwork.location}
                         </span>
                       </div>
                     </div>
 
                     {viewMode === 'list' && (
-                      <p className="text-sm mb-3 line-clamp-2" style={{ color: '#cccccc' }}>
+                      <p className="text-sm mb-3 line-clamp-2" style={{ color: '#4b5563' }}>
                         {artwork.description}
                       </p>
                     )}
@@ -246,13 +246,13 @@ const Gallery = () => {
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 px-6 py-4"
-           style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)', backdropFilter: 'blur(10px)' }}>
+           style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderTop: '1px solid #e5e7eb' }}>
         <div className="max-w-md mx-auto flex justify-around">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => navigate('/')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <MapPin className="h-5 w-5" />
           </Button>
@@ -260,7 +260,7 @@ const Gallery = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/scanner')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <QrCode className="h-5 w-5" />
           </Button>
@@ -268,7 +268,7 @@ const Gallery = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/ar')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Camera className="h-5 w-5" />
           </Button>
@@ -276,7 +276,7 @@ const Gallery = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/favorites')}
-            style={{ color: '#ffffff' }}
+            style={{ color: '#6b7280' }}
           >
             <Heart className="h-5 w-5" />
           </Button>
