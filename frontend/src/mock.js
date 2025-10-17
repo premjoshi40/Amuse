@@ -212,7 +212,7 @@ export const museumData = {
         title: 'Mask of Tutankhamun',
         artist: 'Ancient Egyptian Artisans',
         year: 'c. 1323 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoMuseumTaaMaskMostlyPhotographed.jpg/800px-CairoMuseumTaaMaskMostlyPhotographed.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Tut_expo_2019_-_Masque_fun%C3%A9raire_%28cropped%29.jpg/800px-Tut_expo_2019_-_Masque_fun%C3%A9raire_%28cropped%29.jpg',
         category: 'historical',
         location: 'Ancient Civilizations Wing - Egyptian Section',
         nfcCode: 'NFC008',
