@@ -145,7 +145,7 @@ const Home = () => {
               onClick={handleARMode}
               size="lg"
               style={{
-                background: 'linear-gradient(135deg, #6c5ce7, #5f27cd)',
+                background: 'linear-gradient(135deg, #6c5ce7, #10ac84)',
                 color: '#ffffff',
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
