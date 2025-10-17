@@ -79,7 +79,7 @@ const Gallery = () => {
             </Button>
             <div>
               <h1 className="text-2xl font-bold" style={{ 
-                background: 'linear-gradient(135deg, #5f27cd, #341f97)',
+                background: 'linear-gradient(135deg, #10ac84, #00a085)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
