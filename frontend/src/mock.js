@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'bust-nefertiti',
-        title: 'Bust of Nefertiti',
-        artist: 'Thutmose',
-        year: 'c. 1345 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Nofretete_Neues_Museum.jpg',
+        id: 'great-sphinx',
+        title: 'The Great Sphinx of Giza',
+        artist: 'Ancient Egyptian Builders',
+        year: 'c. 2500 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg',
         category: 'historical',
         location: 'Ancient Civilizations Wing - Egyptian Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A painted limestone bust of Nefertiti, the Great Royal Wife of Egyptian pharaoh Akhenaten, one of the most copied works of ancient Egypt.',
-        artist_info: 'Sculpted by Thutmose, the official court sculptor of Akhenaten.',
-        historical_context: 'Created during the Amarna period when Akhenaten and Nefertiti revolutionized Egyptian art and religion.',
-        techniques: 'Carved from limestone and covered with layers of painted stucco, with inlaid eyes',
-        cultural_significance: 'Icon of feminine beauty and one of the most famous artworks from ancient Egypt',
-        dimensions: '50 cm (20 in) tall',
-        medium: 'Limestone and stucco',
-        provenance: 'Discovered in 1912 in Thutmose\'s workshop in Amarna, now in Neues Museum, Berlin',
+        description: 'A monumental limestone statue with the head of a human and the body of a lion, one of the largest and oldest monolithic statues in the world.',
+        artist_info: 'Built by ancient Egyptian builders during the reign of Pharaoh Khafre.',
+        historical_context: 'Constructed during Egypt\'s Old Kingdom, believed to represent Pharaoh Khafre as a guardian of the Giza pyramid complex.',
+        techniques: 'Carved directly from the bedrock of the Giza plateau, massive limestone monolith',
+        cultural_significance: 'One of the most recognizable symbols of ancient Egypt and human civilization',
+        dimensions: '73 m (240 ft) long, 20 m (66 ft) high',
+        medium: 'Limestone',
+        provenance: 'Located at the Giza pyramid complex near Cairo, Egypt',
         interesting_facts: [
-          'One eye is missing - possibly left unfinished intentionally as a model',
-          'The painted surface is remarkably well-preserved after 3,300 years',
-          'Nefertiti means "the beautiful one has come"',
-          'Egypt has repeatedly requested its return from Germany'
+          'The nose is mysteriously missing - damaged sometime between 3rd-10th century AD',
+          'Was buried in sand up to its shoulders for most of its history',
+          'The original name in ancient Egyptian means "the living image"',
+          'Older than the Pyramids of Giza, possibly by several centuries'
         ]
       }
     ]
