@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import ArtworkDetail from "./components/ArtworkDetail";
@@ -14,7 +14,7 @@ import { Toaster } from "./components/ui/toaster";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery/:category" element={<Gallery />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/tour/:tourId" element={<TourDetail />} />
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Toaster />
     </div>
   );
