@@ -184,7 +184,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4" style={{ 
-              background: 'linear-gradient(135deg, #5f27cd, #341f97)',
+              background: 'linear-gradient(135deg, #10ac84, #00a085)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
