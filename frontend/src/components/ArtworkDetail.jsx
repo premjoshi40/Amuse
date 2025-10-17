@@ -213,7 +213,7 @@ const ArtworkDetail = () => {
                     value={tab.value}
                     style={{ 
                       color: activeTab === tab.value ? '#ffffff' : '#636e72',
-                      background: activeTab === tab.value ? 'linear-gradient(135deg, #ff6b6b, #ee5a24)' : 'transparent',
+                      background: activeTab === tab.value ? 'linear-gradient(135deg, #ff6b6b, #10ac84)' : 'transparent',
                       borderRadius: '15px',
                       border: 'none'
                     }}
