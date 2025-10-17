@@ -110,7 +110,7 @@ const Gallery = () => {
               size="sm"
               onClick={() => setViewMode('list')}
               style={{
-                background: viewMode === 'list' ? 'linear-gradient(135deg, #6c5ce7, #5f27cd)' : 'transparent',
+                background: viewMode === 'list' ? 'linear-gradient(135deg, #6c5ce7, #10ac84)' : 'transparent',
                 color: viewMode === 'list' ? '#ffffff' : '#6c5ce7',
                 borderRadius: '15px',
                 border: viewMode === 'list' ? 'none' : '2px solid #6c5ce7'
