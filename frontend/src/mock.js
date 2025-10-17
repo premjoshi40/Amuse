@@ -237,7 +237,7 @@ export const museumData = {
         title: 'Parthenon Marbles',
         artist: 'Phidias and Workshop',
         year: '447-438 BC',
-        image: 'https://via.placeholder.com/400x600/6C5CE7/FFFFFF?text=Parthenon+Marbles',
+        image: 'https://placehold.co/400x600/ff9a9e/ffffff.png?text=Parthenon+Marbles',
         category: 'historical',
         location: 'Ancient Civilizations Wing - Greek Section',
         nfcCode: 'NFC009',
