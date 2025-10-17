@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
       <header className="px-6 py-4 border-b" style={{ borderColor: '#1f1f1f', backgroundColor: '#0f0f0f' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
