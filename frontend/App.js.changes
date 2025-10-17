@@ -1,0 +1,21 @@
+=== CHANGES TO src/App.js ===
+
+CHANGE the import line FROM:
+  import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+TO:
+  import { HashRouter, Routes, Route } from "react-router-dom";
+
+CHANGE the JSX FROM:
+  <BrowserRouter>
+    <Routes>
+      ...
+    </Routes>
+  </BrowserRouter>
+
+TO:
+  <HashRouter>
+    <Routes>
+      ...
+    </Routes>
+  </HashRouter>
