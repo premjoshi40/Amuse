@@ -97,7 +97,7 @@ const Gallery = () => {
               size="sm"
               onClick={() => setViewMode('grid')}
               style={{
-                background: viewMode === 'grid' ? 'linear-gradient(135deg, #6c5ce7, #5f27cd)' : 'transparent',
+                background: viewMode === 'grid' ? 'linear-gradient(135deg, #6c5ce7, #10ac84)' : 'transparent',
                 color: viewMode === 'grid' ? '#ffffff' : '#6c5ce7',
                 borderRadius: '15px',
                 border: viewMode === 'grid' ? 'none' : '2px solid #6c5ce7'
