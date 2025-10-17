@@ -159,7 +159,7 @@ export const museumData = {
         title: 'Pietà',
         artist: 'Michelangelo',
         year: '1498-1499',
-        image: 'https://picsum.photos/400/600?random=3',
+        image: 'https://via.placeholder.com/400x600/FF6B6B/FFFFFF?text=Pieta',
         category: 'sculptures',
         location: 'Sculpture Hall - Renaissance Section',
         nfcCode: 'NFC006',
