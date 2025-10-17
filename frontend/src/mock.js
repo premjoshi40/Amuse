@@ -105,28 +105,28 @@ export const museumData = {
 
     sculptures: [
       {
-        id: 'venus-de-milo',
-        title: 'Venus de Milo',
-        artist: 'Alexandros of Antioch',
-        year: 'c. 130-100 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Venus_de_Milo,_1250548,_24102009,_Louvre,_Paris,_France.jpg',
+        id: 'david',
+        title: 'David',
+        artist: 'Michelangelo',
+        year: '1501-1504',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/1/19/David_von_Michelangelo.jpg',
         category: 'sculptures',
-        location: 'Sculpture Hall - Ancient Greek Section',
+        location: 'Sculpture Hall - Renaissance Section',
         nfcCode: 'NFC004',
         qrCode: 'QR004',
-        description: 'An ancient Greek statue believed to depict Aphrodite, the Greek goddess of love and beauty.',
-        artist_info: 'Alexandros of Antioch was an ancient Greek sculptor from the Hellenistic period.',
-        historical_context: 'Created during the Hellenistic period when Greek art reached new heights of realism and emotion.',
-        techniques: 'Carved from Parian marble using traditional Greek sculpting techniques with detailed drapery work',
-        cultural_significance: 'Symbol of classical beauty and one of the most famous ancient Greek sculptures',
-        dimensions: '2.02 m (6 ft 8 in) tall',
-        medium: 'Parian marble',
-        provenance: 'Discovered on the Greek island of Milos in 1820, acquired by the Louvre',
+        description: 'A masterpiece of Renaissance sculpture depicting the Biblical hero David, representing the defense of civil liberties.',
+        artist_info: 'Michelangelo di Lodovico Buonarroti Simoni (1475-1564), Italian sculptor, painter, architect, and poet of the High Renaissance.',
+        historical_context: 'Commissioned by the Opera del Duomo for the Cathedral of Florence, symbolizing the defense of civil liberties embodied in the Republic of Florence.',
+        techniques: 'Carved from a single block of Carrara marble, unprecedented attention to anatomical detail and contrapposto stance',
+        cultural_significance: 'Considered the ideal of male beauty and symbol of the Renaissance, represents human strength and wrath',
+        dimensions: '5.17 m (17 ft) tall',
+        medium: 'Carrara marble',
+        provenance: 'Commissioned in 1501, originally placed in Piazza della Signoria, now in Galleria dell\'Accademia',
         interesting_facts: [
-          'The arms were already missing when discovered in 1820',
-          'The statue is composed of several marble blocks',
-          'Originally would have been painted in realistic colors',
-          'Inspired countless Renaissance and neoclassical artists'
+          'Carved from a single block of marble that had been abandoned for 25 years',
+          'The statue\'s hands are disproportionately large, symbolizing strength',
+          'David is depicted before his battle with Goliath, showing concentration and tension',
+          'Michelangelo was only 26 when he completed it'
         ]
       },
       {
@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'parthenon-marbles',
-        title: 'Parthenon Marbles',
-        artist: 'Phidias and Workshop',
-        year: '447-438 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Elgin_Marbles_British_Museum.jpg',
+        id: 'terracotta-army',
+        title: 'Terracotta Army',
+        artist: 'Ancient Chinese Artisans',
+        year: 'c. 210-209 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Terracotta_Army%2C_View_of_Pit_1.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Greek Section',
+        location: 'Ancient Civilizations Wing - Chinese Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'Classical Greek marble sculptures that decorated the Parthenon in Athens, representing the height of ancient Greek art.',
-        artist_info: 'Phidias (c. 480-430 BC) was the most famous sculptor of ancient Greece, overseeing the Parthenon\'s decoration.',
-        historical_context: 'Created during the Golden Age of Athens under Pericles as part of the Parthenon temple complex.',
-        techniques: 'High and low relief marble carving with extraordinary attention to anatomical detail and movement',
-        cultural_significance: 'Represents the pinnacle of classical Greek art and democratic ideals of ancient Athens',
-        dimensions: 'Various sizes, frieze originally 160 meters long',
-        medium: 'Pentelic marble',
-        provenance: 'Originally on the Parthenon, removed by Lord Elgin in early 1800s',
+        description: 'A collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China, buried with him to protect him in the afterlife.',
+        artist_info: 'Created by thousands of ancient Chinese artisans and craftsmen during the Qin Dynasty.',
+        historical_context: 'Built to accompany the first Emperor of China into the afterlife, representing his imperial guard and showcasing Qin Dynasty military organization.',
+        techniques: 'Life-sized figures molded from terracotta clay, each warrior individually crafted with unique facial features and details',
+        cultural_significance: 'One of the greatest archaeological discoveries of the 20th century, reveals the power and artistry of ancient China',
+        dimensions: 'Over 8,000 soldiers, 130 chariots, 520 horses, and 150 cavalry horses',
+        medium: 'Terracotta clay',
+        provenance: 'Discovered in 1974 by local farmers near Xi\'an, China',
         interesting_facts: [
-          'Depicts the Panathenaic procession in honor of Athena',
-          'Originally painted in bright colors',
-          'Subject of ongoing repatriation debates',
-          'Influenced Western art for over 2,000 years'
+          'Each warrior has unique facial features - no two are exactly alike',
+          'Originally painted in bright colors that faded upon excavation',
+          'Took over 700,000 workers to construct the entire mausoleum complex',
+          'Many sections remain unexcavated to preserve them for future technology'
         ]
       }
     ]
