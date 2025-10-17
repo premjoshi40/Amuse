@@ -306,7 +306,7 @@ const Gallery = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/scanner')}
-            style={{ color: '#6c5ce7' }}
+            style={{ color: '#00d2d3' }}
           >
             <QrCode className="h-5 w-5" />
           </Button>
