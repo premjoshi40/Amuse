@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'venus-willendorf',
-        title: 'Venus of Willendorf',
-        artist: 'Unknown Paleolithic Artist',
-        year: 'c. 25,000 BC',
-        image: 'https://placehold.co/600x900/d4c5b9/8b7355?text=Venus+of+Willendorf',
+        id: 'lewis-chessmen',
+        title: 'Lewis Chessmen',
+        artist: 'Unknown Norse Craftsmen',
+        year: 'c. 1150-1200 AD',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Chessmen_from_the_Isle_of_Lewis.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Prehistoric Section',
+        location: 'Ancient Civilizations Wing - Medieval Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A prehistoric figurine depicting a female form, one of the oldest and most famous examples of prehistoric art.',
-        artist_info: 'Created by an unknown Paleolithic artist during the Upper Paleolithic period.',
-        historical_context: 'Carved during the Ice Age, possibly used in fertility rituals or as a representation of a mother goddess.',
-        techniques: 'Carved from limestone and tinted with red ochre pigment',
-        cultural_significance: 'One of the most important artifacts from prehistoric Europe, represents early human artistic expression',
-        dimensions: '11.1 cm (4.4 in) tall',
-        medium: 'Oolitic limestone',
-        provenance: 'Discovered in 1908 near Willendorf, Austria, now in Natural History Museum Vienna',
+        description: 'A group of distinctive 12th-century chess pieces carved from walrus ivory and whale teeth, discovered on the Isle of Lewis in Scotland.',
+        artist_info: 'Created by Norse craftsmen, possibly in Trondheim, Norway.',
+        historical_context: 'Made during the medieval period when chess was becoming popular in Europe, likely created for a wealthy patron.',
+        techniques: 'Intricately carved from walrus ivory and whale teeth with expressive faces and detailed clothing',
+        cultural_significance: 'Among the most famous chess pieces in the world, providing insight into medieval Norse culture',
+        dimensions: 'Various sizes, pieces range from 3.5 to 10.2 cm tall',
+        medium: 'Walrus ivory and whale teeth',
+        provenance: 'Discovered in 1831 on the Isle of Lewis, Scotland, now in British Museum and National Museum of Scotland',
         interesting_facts: [
-          'Over 25,000 years old - one of the oldest known artworks',
-          'The exaggerated features may represent fertility or abundance',
-          'No facial features are carved, emphasizing the body instead',
-          'Found with layers of Ice Age artifacts including mammoth bones'
+          '93 pieces were found, making up four incomplete chess sets',
+          'Some pieces have expressions showing distress or contemplation',
+          'Inspired the wizard chess pieces in Harry Potter films',
+          'Worth millions, one piece sold at auction for nearly £1 million'
         ]
       }
     ]
