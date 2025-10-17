@@ -6,21 +6,21 @@ export const museumData = {
       name: 'Paintings',
       icon: '🎨',
       description: 'Classical and modern masterpieces from renowned artists',
-      artworkCount: 12
+      artworkCount: 3
     },
     {
       id: 'sculptures',
       name: 'Sculptures', 
       icon: '🗿',
       description: 'Three-dimensional art from ancient to contemporary',
-      artworkCount: 8
+      artworkCount: 3
     },
     {
       id: 'historical',
       name: 'Historical Artifacts',
       icon: '🏺',
       description: 'Ancient relics and cultural treasures',
-      artworkCount: 10
+      artworkCount: 3
     }
   ],
 
@@ -105,33 +105,33 @@ export const museumData = {
 
     sculptures: [
       {
-        id: 'david',
-        title: 'David',
-        artist: 'Michelangelo',
-        year: '1501-1504',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/David_von_Michelangelo.jpg/800px-David_von_Michelangelo.jpg',
+        id: 'venus-de-milo',
+        title: 'Venus de Milo',
+        artist: 'Alexandros of Antioch',
+        year: 'c. 130-100 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Venus_de_Milo_Louvre_Ma399_n4.jpg/800px-Venus_de_Milo_Louvre_Ma399_n4.jpg',
         category: 'sculptures',
-        location: 'Sculpture Hall - Renaissance Section',
+        location: 'Sculpture Hall - Ancient Greek Section',
         nfcCode: 'NFC004',
         qrCode: 'QR004',
-        description: 'A masterpiece of Renaissance sculpture depicting the biblical hero David.',
-        artist_info: 'Michelangelo di Lodovico Buonarroti Simoni (1475-1564), Italian sculptor, painter, architect, and poet.',
-        historical_context: 'Commissioned during the height of the Florentine Republic as a symbol of strength and beauty.',
-        techniques: 'Carved from a single block of Carrara marble using traditional Renaissance sculpting methods',
-        cultural_significance: 'Symbol of Renaissance humanism and the ideal of physical and moral perfection',
-        dimensions: '5.17 m (17.0 ft) tall',
-        medium: 'Carrara marble',
-        provenance: 'Originally placed in Piazza della Signoria, moved to Galleria dell\'Accademia in 1873',
+        description: 'An ancient Greek statue believed to depict Aphrodite, the Greek goddess of love and beauty.',
+        artist_info: 'Alexandros of Antioch was an ancient Greek sculptor from the Hellenistic period.',
+        historical_context: 'Created during the Hellenistic period when Greek art reached new heights of realism and emotion.',
+        techniques: 'Carved from Parian marble using traditional Greek sculpting techniques with detailed drapery work',
+        cultural_significance: 'Symbol of classical beauty and one of the most famous ancient Greek sculptures',
+        dimensions: '2.02 m (6 ft 8 in) tall',
+        medium: 'Parian marble',
+        provenance: 'Discovered on the Greek island of Milos in 1820, acquired by the Louvre',
         interesting_facts: [
-          'Carved from a damaged block of marble abandoned for 40 years',
-          'David\'s hands and head are disproportionally large',
-          'Originally intended for the Florence Cathedral roofline',
-          'Weighs approximately 6 tons'
+          'The arms were already missing when discovered in 1820',
+          'The statue is composed of several marble blocks',
+          'Originally would have been painted in realistic colors',
+          'Inspired countless Renaissance and neoclassical artists'
         ]
       },
       {
         id: 'thinking-man',
-        title: 'The Thinking Man',
+        title: 'The Thinker',
         artist: 'Auguste Rodin',
         year: '1904',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paris_2010_-_Le_Penseur.jpg/800px-Paris_2010_-_Le_Penseur.jpg',
@@ -153,6 +153,31 @@ export const museumData = {
           'Inspired by Michelangelo\'s figures on the Sistine Chapel',
           'Has become one of the most recognizable sculptures in art'
         ]
+      },
+      {
+        id: 'pieta',
+        title: 'Pietà',
+        artist: 'Michelangelo',
+        year: '1498-1499',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg/800px-Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg',
+        category: 'sculptures',
+        location: 'Sculpture Hall - Renaissance Section',
+        nfcCode: 'NFC006',
+        qrCode: 'QR006',
+        description: 'A Renaissance marble sculpture depicting the Virgin Mary holding the dead body of Jesus Christ.',
+        artist_info: 'Michelangelo di Lodovico Buonarroti Simoni (1475-1564), Italian sculptor, painter, architect, and poet.',
+        historical_context: 'Commissioned for a French cardinal\'s funeral monument during the High Renaissance.',
+        techniques: 'Carved from a single block of Carrara marble with extraordinary attention to anatomical detail',
+        cultural_significance: 'Masterpiece of Renaissance art representing divine love and human suffering',
+        dimensions: '1.74 m × 1.95 m (5.7 ft × 6.4 ft)',
+        medium: 'Carrara marble',
+        provenance: 'Originally in St. Peter\'s Basilica, now housed in Vatican Museums',
+        interesting_facts: [
+          'The only work Michelangelo ever signed',
+          'Mary appears younger than Jesus, symbolizing her purity',
+          'Survived an attack with a hammer in 1972',
+          'Michelangelo was only 24 when he completed it'
+        ]
       }
     ],
 
@@ -165,8 +190,8 @@ export const museumData = {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Rosetta_Stone.JPG/800px-Rosetta_Stone.JPG',
         category: 'historical',
         location: 'Ancient Civilizations Wing',
-        nfcCode: 'NFC006',
-        qrCode: 'QR006',
+        nfcCode: 'NFC007',
+        qrCode: 'QR007',
         description: 'A granodiorite stele inscribed with a decree in three scripts: hieroglyphic, Demotic, and Greek.',
         artist_info: 'Created by ancient Egyptian priests and scribes during the Ptolemaic dynasty.',
         historical_context: 'Created during the reign of Ptolemy V as a public decree, discovered during Napoleon\'s Egyptian campaign.',
@@ -183,28 +208,53 @@ export const museumData = {
         ]
       },
       {
-        id: 'terracotta-warriors',
-        title: 'Terracotta Warriors',
-        artist: 'Ancient Chinese Artisans',
-        year: '210-209 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Terracotta_Army_Pit_1_-_14-04-2014.jpg/1024px-Terracotta_Army_Pit_1_-_14-04-2014.jpg',
+        id: 'mask-tutankhamun',
+        title: 'Mask of Tutankhamun',
+        artist: 'Ancient Egyptian Artisans',
+        year: 'c. 1323 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoMuseumTaaMaskMostlyPhotographed.jpg/800px-CairoMuseumTaaMaskMostlyPhotographed.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Chinese Section',
-        nfcCode: 'NFC007',
-        qrCode: 'QR007',
-        description: 'A collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China.',
-        artist_info: 'Created by thousands of ancient Chinese artisans and craftsmen under imperial commission.',
-        historical_context: 'Buried with Emperor Qin Shi Huang in 210-209 BCE to protect him in the afterlife.',
-        techniques: 'Terracotta clay modeling, firing, and painting techniques with individual facial features',
-        cultural_significance: 'Represents ancient Chinese beliefs about death and afterlife, showcases advanced craftsmanship',
-        dimensions: 'Over 8,000 soldiers, varying heights 183-195 cm',
-        medium: 'Terracotta clay',
-        provenance: 'Discovered in 1974 by local farmers, ongoing archaeological excavation',
+        location: 'Ancient Civilizations Wing - Egyptian Section',
+        nfcCode: 'NFC008',
+        qrCode: 'QR008',
+        description: 'The golden funerary mask of the Egyptian pharaoh Tutankhamun, discovered in his intact tomb.',
+        artist_info: 'Created by skilled ancient Egyptian artisans and goldsmiths during the 18th Dynasty.',
+        historical_context: 'Made for the boy king Tutankhamun who ruled Egypt during the New Kingdom period.',
+        techniques: 'Beaten gold with inlaid precious stones, cloisonné technique, and detailed metalwork',
+        cultural_significance: 'Symbol of ancient Egyptian wealth and artistry, represents beliefs about the afterlife',
+        dimensions: '54 cm × 39.3 cm × 49 cm',
+        medium: 'Gold with precious stone inlays',
+        provenance: 'Discovered by Howard Carter in 1922 in the Valley of the Kings',
         interesting_facts: [
-          'Each warrior has unique facial features and expressions',
-          'Originally painted in bright colors that faded upon exposure',
-          'Includes horses, chariots, and non-military figures',
-          'Considered the Eighth Wonder of the World'
+          'Made from 11 kilograms of solid gold',
+          'Features lapis lazuli, quartz, and obsidian inlays',
+          'Tutankhamun died at approximately age 19',
+          'The tomb was the most intact pharaoh\'s tomb ever found'
+        ]
+      },
+      {
+        id: 'parthenon-marbles',
+        title: 'Parthenon Marbles',
+        artist: 'Phidias and Workshop',
+        year: '447-438 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Elgin_Marbles_British_Museum.jpg/1024px-Elgin_Marbles_British_Museum.jpg',
+        category: 'historical',
+        location: 'Ancient Civilizations Wing - Greek Section',
+        nfcCode: 'NFC009',
+        qrCode: 'QR009',
+        description: 'Classical Greek marble sculptures that decorated the Parthenon in Athens, representing the height of ancient Greek art.',
+        artist_info: 'Phidias (c. 480-430 BC) was the most famous sculptor of ancient Greece, overseeing the Parthenon\'s decoration.',
+        historical_context: 'Created during the Golden Age of Athens under Pericles as part of the Parthenon temple complex.',
+        techniques: 'High and low relief marble carving with extraordinary attention to anatomical detail and movement',
+        cultural_significance: 'Represents the pinnacle of classical Greek art and democratic ideals of ancient Athens',
+        dimensions: 'Various sizes, frieze originally 160 meters long',
+        medium: 'Pentelic marble',
+        provenance: 'Originally on the Parthenon, removed by Lord Elgin in early 1800s',
+        interesting_facts: [
+          'Depicts the Panathenaic procession in honor of Athena',
+          'Originally painted in bright colors',
+          'Subject of ongoing repatriation debates',
+          'Influenced Western art for over 2,000 years'
         ]
       }
     ]
@@ -216,7 +266,7 @@ export const museumData = {
       name: 'Museum Highlights',
       duration: '45 minutes',
       description: 'A curated journey through our most famous pieces',
-      artworks: ['mona-lisa', 'starry-night', 'david', 'rosetta-stone'],
+      artworks: ['mona-lisa', 'starry-night', 'venus-de-milo', 'rosetta-stone'],
       stops: [
         {
           artwork: 'mona-lisa',
@@ -229,9 +279,9 @@ export const museumData = {
           focus: 'Post-impressionist movement and van Gogh\'s mental state'
         },
         {
-          artwork: 'david',
+          artwork: 'venus-de-milo',
           duration: '15 minutes',
-          focus: 'Renaissance sculpture and symbolism of David'
+          focus: 'Ancient Greek ideals of beauty and classical sculpture'
         },
         {
           artwork: 'rosetta-stone',
@@ -245,12 +295,12 @@ export const museumData = {
       name: 'Art Through the Ages',
       duration: '60 minutes',
       description: 'Explore the evolution of art from ancient to modern times',
-      artworks: ['terracotta-warriors', 'girl-pearl-earring', 'starry-night', 'thinking-man'],
+      artworks: ['parthenon-marbles', 'girl-pearl-earring', 'starry-night', 'thinking-man'],
       stops: [
         {
-          artwork: 'terracotta-warriors',
+          artwork: 'parthenon-marbles',
           duration: '15 minutes',
-          focus: 'Ancient Chinese artistry and burial customs'
+          focus: 'Classical Greek art and democratic ideals'
         },
         {
           artwork: 'girl-pearl-earring',
