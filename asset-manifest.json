@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Amuse/static/css/main.2653d3fc.css",
-    "main.js": "/Amuse/static/js/main.bb8be3a0.js",
+    "main.js": "/Amuse/static/js/main.4d10f931.js",
     "index.html": "/Amuse/index.html",
     "main.2653d3fc.css.map": "/Amuse/static/css/main.2653d3fc.css.map",
-    "main.bb8be3a0.js.map": "/Amuse/static/js/main.bb8be3a0.js.map"
+    "main.4d10f931.js.map": "/Amuse/static/js/main.4d10f931.js.map"
   },
   "entrypoints": [
     "static/css/main.2653d3fc.css",
-    "static/js/main.bb8be3a0.js"
+    "static/js/main.4d10f931.js"
   ]
 }
