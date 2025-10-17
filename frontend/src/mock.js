@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'standard-ur',
-        title: 'Standard of Ur',
-        artist: 'Ancient Sumerian Artisans',
-        year: 'c. 2600 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Standard_of_Ur_-_War.jpg',
+        id: 'venus-willendorf',
+        title: 'Venus of Willendorf',
+        artist: 'Unknown Paleolithic Artist',
+        year: 'c. 25,000 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Venus_of_Willendorf_frontview_retouched_2.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Mesopotamian Section',
+        location: 'Ancient Civilizations Wing - Prehistoric Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A Sumerian artifact depicting scenes of war and peace, one of the earliest surviving examples of historical narrative art.',
-        artist_info: 'Created by Sumerian artisans during the First Dynasty of Ur.',
-        historical_context: 'Discovered in a royal tomb in the ancient city of Ur (modern-day Iraq), provides insight into Sumerian military and social life.',
-        techniques: 'Wooden box decorated with mosaic of shell, red limestone, and lapis lazuli inlaid panels',
-        cultural_significance: 'One of the most important artifacts from ancient Mesopotamia, showing detailed scenes of ancient warfare and celebration',
-        dimensions: '21.59 cm × 49.53 cm',
-        medium: 'Wood, shell, red limestone, lapis lazuli',
-        provenance: 'Discovered in 1922 by Leonard Woolley, now in the British Museum',
+        description: 'A prehistoric figurine depicting a female form, one of the oldest and most famous examples of prehistoric art.',
+        artist_info: 'Created by an unknown Paleolithic artist during the Upper Paleolithic period.',
+        historical_context: 'Carved during the Ice Age, possibly used in fertility rituals or as a representation of a mother goddess.',
+        techniques: 'Carved from limestone and tinted with red ochre pigment',
+        cultural_significance: 'One of the most important artifacts from prehistoric Europe, represents early human artistic expression',
+        dimensions: '11.1 cm (4.4 in) tall',
+        medium: 'Oolitic limestone',
+        provenance: 'Discovered in 1908 near Willendorf, Austria, now in Natural History Museum Vienna',
         interesting_facts: [
-          'Has two sides: the "War" side showing military victory, and the "Peace" side showing a celebration banquet',
-          'The lapis lazuli came from Afghanistan, over 1,000 miles away',
-          'The purpose of the object is still debated - possibly a royal standard or a musical instrument soundbox',
-          'Over 4,600 years old and remarkably well-preserved'
+          'Over 25,000 years old - one of the oldest known artworks',
+          'The exaggerated features may represent fertility or abundance',
+          'No facial features are carved, emphasizing the body instead',
+          'Found with layers of Ice Age artifacts including mammoth bones'
         ]
       }
     ]
