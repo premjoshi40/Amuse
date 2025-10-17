@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'great-sphinx',
-        title: 'The Great Sphinx of Giza',
-        artist: 'Ancient Egyptian Builders',
-        year: 'c. 2500 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg',
+        id: 'standard-ur',
+        title: 'Standard of Ur',
+        artist: 'Ancient Sumerian Artisans',
+        year: 'c. 2600 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Standard_of_Ur_-_War.jpg',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Egyptian Section',
+        location: 'Ancient Civilizations Wing - Mesopotamian Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'A monumental limestone statue with the head of a human and the body of a lion, one of the largest and oldest monolithic statues in the world.',
-        artist_info: 'Built by ancient Egyptian builders during the reign of Pharaoh Khafre.',
-        historical_context: 'Constructed during Egypt\'s Old Kingdom, believed to represent Pharaoh Khafre as a guardian of the Giza pyramid complex.',
-        techniques: 'Carved directly from the bedrock of the Giza plateau, massive limestone monolith',
-        cultural_significance: 'One of the most recognizable symbols of ancient Egypt and human civilization',
-        dimensions: '73 m (240 ft) long, 20 m (66 ft) high',
-        medium: 'Limestone',
-        provenance: 'Located at the Giza pyramid complex near Cairo, Egypt',
+        description: 'A Sumerian artifact depicting scenes of war and peace, one of the earliest surviving examples of historical narrative art.',
+        artist_info: 'Created by Sumerian artisans during the First Dynasty of Ur.',
+        historical_context: 'Discovered in a royal tomb in the ancient city of Ur (modern-day Iraq), provides insight into Sumerian military and social life.',
+        techniques: 'Wooden box decorated with mosaic of shell, red limestone, and lapis lazuli inlaid panels',
+        cultural_significance: 'One of the most important artifacts from ancient Mesopotamia, showing detailed scenes of ancient warfare and celebration',
+        dimensions: '21.59 cm × 49.53 cm',
+        medium: 'Wood, shell, red limestone, lapis lazuli',
+        provenance: 'Discovered in 1922 by Leonard Woolley, now in the British Museum',
         interesting_facts: [
-          'The nose is mysteriously missing - damaged sometime between 3rd-10th century AD',
-          'Was buried in sand up to its shoulders for most of its history',
-          'The original name in ancient Egyptian means "the living image"',
-          'Older than the Pyramids of Giza, possibly by several centuries'
+          'Has two sides: the "War" side showing military victory, and the "Peace" side showing a celebration banquet',
+          'The lapis lazuli came from Afghanistan, over 1,000 miles away',
+          'The purpose of the object is still debated - possibly a royal standard or a musical instrument soundbox',
+          'Over 4,600 years old and remarkably well-preserved'
         ]
       }
     ]
