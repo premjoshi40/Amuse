@@ -320,7 +320,7 @@ const Scanner = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/')}
-            style={{ color: '#6b7280' }}
+            style={{ color: '#00d2d3' }}
           >
             <QrCode className="h-5 w-5" />
           </Button>
@@ -336,7 +336,7 @@ const Scanner = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/ar')}
-            style={{ color: '#6b7280' }}
+            style={{ color: '#00d2d3' }}
           >
             <Camera className="h-5 w-5" />
           </Button>
@@ -344,7 +344,7 @@ const Scanner = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/favorites')}
-            style={{ color: '#6b7280' }}
+            style={{ color: '#00d2d3' }}
           >
             <CheckCircle className="h-5 w-5" />
           </Button>
