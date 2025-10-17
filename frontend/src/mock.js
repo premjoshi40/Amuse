@@ -105,28 +105,28 @@ export const museumData = {
 
     sculptures: [
       {
-        id: 'discus-thrower',
-        title: 'Discobolus (Discus Thrower)',
-        artist: 'Myron',
-        year: 'c. 460-450 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Discobolus_Lancelotti_Massimo.jpg',
+        id: 'winged-victory',
+        title: 'Winged Victory of Samothrace',
+        artist: 'Unknown Ancient Greek Artist',
+        year: 'c. 200-190 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Nike_of_Samothrake_Louvre_Ma2369_n4.jpg',
         category: 'sculptures',
         location: 'Sculpture Hall - Ancient Greek Section',
         nfcCode: 'NFC004',
         qrCode: 'QR004',
-        description: 'An ancient Greek sculpture depicting an athlete about to throw a discus, representing the ideal athletic form.',
-        artist_info: 'Myron was an ancient Greek sculptor from the mid-5th century BC, known for naturalistic poses.',
-        historical_context: 'Created during the Classical period of ancient Greece when artists achieved unprecedented realism in depicting the human body.',
-        techniques: 'Bronze casting with careful attention to anatomical detail and dynamic motion',
-        cultural_significance: 'Represents the Greek ideal of physical perfection and athletic prowess, one of the most famous ancient sculptures',
-        dimensions: 'Life-sized figure',
-        medium: 'Bronze (original), marble copies',
-        provenance: 'Original bronze lost, known through Roman marble copies',
+        description: 'A Hellenistic sculpture of Nike, the Greek goddess of victory, one of the greatest masterpieces of ancient Greek sculpture.',
+        artist_info: 'Created by an unknown Greek sculptor during the Hellenistic period.',
+        historical_context: 'Likely created to commemorate a naval victory, originally positioned overlooking the sanctuary on Samothrace.',
+        techniques: 'Carved from Parian marble with masterful depiction of wind-blown drapery and movement',
+        cultural_significance: 'Considered one of the greatest masterpieces of Hellenistic sculpture, exemplifying dynamic motion',
+        dimensions: '2.44 m (8 ft) tall',
+        medium: 'Parian marble',
+        provenance: 'Discovered in 1863 on the island of Samothrace, now in the Louvre',
         interesting_facts: [
-          'Shows an athlete frozen in motion at the moment before release',
-          'The twisted pose was revolutionary for its time',
-          'Original bronze statue has been lost, we only have marble Roman copies',
-          'Influenced Renaissance and neoclassical artists'
+          'The head and arms have never been found',
+          'Depicts the goddess Nike landing on a ship\'s bow',
+          'The sculpture captures movement with incredible realism',
+          'Displayed prominently at the top of the Daru staircase in the Louvre'
         ]
       },
       {
@@ -233,28 +233,28 @@ export const museumData = {
         ]
       },
       {
-        id: 'dead-sea-scrolls',
-        title: 'Dead Sea Scrolls',
-        artist: 'Ancient Jewish Scribes',
-        year: 'c. 300 BC - 100 AD',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Dead_sea_scrolls.jpg',
+        id: 'code-hammurabi',
+        title: 'Code of Hammurabi',
+        artist: 'Ancient Babylonian Scribes',
+        year: 'c. 1754 BC',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/P1050763_Louvre_code_Hammurabi_face_rwk.JPG',
         category: 'historical',
-        location: 'Ancient Civilizations Wing - Middle Eastern Section',
+        location: 'Ancient Civilizations Wing - Mesopotamian Section',
         nfcCode: 'NFC009',
         qrCode: 'QR009',
-        description: 'Ancient Jewish religious texts discovered in caves near the Dead Sea, including the oldest known manuscripts of biblical texts.',
-        artist_info: 'Created by Jewish scribes and religious communities living in the Judean Desert.',
-        historical_context: 'Written during the Second Temple period, providing invaluable insight into ancient Judaism and early biblical texts.',
-        techniques: 'Written on parchment and papyrus using ink, stored in pottery jars for preservation',
-        cultural_significance: 'One of the most significant archaeological discoveries, containing the oldest known biblical manuscripts',
-        dimensions: 'Over 900 documents, various sizes',
-        medium: 'Parchment, papyrus, and bronze',
-        provenance: 'Discovered in 1947 by Bedouin shepherds in caves near Qumran',
+        description: 'A Babylonian stone stele inscribed with one of the oldest and most complete written legal codes, established by King Hammurabi.',
+        artist_info: 'Commissioned by Hammurabi, sixth king of Babylon, inscribed by royal scribes.',
+        historical_context: 'Created during the reign of Hammurabi to establish uniform laws across his empire, one of the earliest examples of written law.',
+        techniques: 'Carved in cuneiform script on a black diorite stele, topped with a relief showing Hammurabi receiving laws from Shamash',
+        cultural_significance: 'One of the oldest deciphered writings, establishing the principle of "eye for an eye" justice',
+        dimensions: '2.25 m (7.4 ft) tall',
+        medium: 'Basalt stele',
+        provenance: 'Discovered in 1901 in Susa, Iran, now in the Louvre Museum',
         interesting_facts: [
-          'Discovered accidentally by a shepherd looking for a lost goat',
-          'Include texts from every book of the Hebrew Bible except Esther',
-          'Were hidden in jars in caves around 70 AD',
-          'Some scrolls are over 2,000 years old and remarkably well preserved'
+          'Contains 282 laws covering everything from trade to family relationships',
+          'Established the famous principle of "an eye for an eye"',
+          'One of the earliest examples of presumption of innocence',
+          'The laws varied based on social class - nobles, commoners, and slaves'
         ]
       }
     ]
