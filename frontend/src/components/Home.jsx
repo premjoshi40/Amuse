@@ -118,7 +118,7 @@ const Home = () => {
               Discover Art Like Never Before
             </h2>
             <p className="text-xl max-w-3xl mx-auto mb-8"
-               style={{ color: '#5f27cd' }}>
+               style={{ color: '#10ac84' }}>
               Experience an immersive journey through history's greatest artworks with AR, interactive displays, and instant information discovery.
             </p>
           </div>
