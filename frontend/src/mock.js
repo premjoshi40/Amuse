@@ -237,7 +237,7 @@ export const museumData = {
         title: 'Parthenon Marbles',
         artist: 'Phidias and Workshop',
         year: '447-438 BC',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Elgin_Marbles_British_Museum.jpg/600px-Elgin_Marbles_British_Museum.jpg',
+        image: 'https://images.unsplash.com/photo-1576020799627-aeac74d58064?w=600&h=800&fit=crop',
         category: 'historical',
         location: 'Ancient Civilizations Wing - Greek Section',
         nfcCode: 'NFC009',
